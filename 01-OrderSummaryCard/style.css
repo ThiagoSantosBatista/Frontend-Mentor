@@ -1,0 +1,137 @@
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1rem;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+main {
+  background-color: var(--Pale-blue);
+  height: 100%;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  background-image: url(/img/pattern-background-desktop.svg);
+  background-position-y: -10%;
+  background-repeat: no-repeat;
+  font-family: "Red Hat Display", sans-serif;
+}
+.card {
+  width: 40rem;
+  max-height: 65rem;
+  max-width: 90%;
+  border-radius: 3rem;
+  background-color: white;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.hero {
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+.textoResumo {
+  margin: 3rem 4rem;
+  text-align: center;
+}
+.card h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--Dark-blue);
+}
+.card p {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 1.5rem;
+}
+.plano {
+  margin: 3rem 4rem;
+}
+a {
+  display: block;
+}
+.plano-anual {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto;
+  text-align: initial;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--Very-pale-blue);
+}
+.plano-anual p {
+  font-weight: 500;
+  margin: 0;
+}
+.plano-anual h2 {
+  font-weight: 900;
+  color: var(--Dark-blue);
+}
+.plano-anual a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0rem 2rem;
+  color: var(--Bright-blue);
+}
+.plano-anual a:hover {
+  color: hsla(245, 75%, 52%, 0.637);
+}
+.pagamento {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: var(--Bright-blue);
+  box-shadow: 0rem 1.5rem 1.7rem 0.7rem var(--Pale-blue);
+}
+.pagamento:hover {
+  background-color: hsla(245, 75%, 52%, 0.637);
+}
+.cancel {
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+}
+.cancel:hover {
+  color: var(--Dark-blue);
+}
+
+@media (max-width: 375px) {
+  main {
+    background-image: url(/img/pattern-background-mobile.svg);
+    background-position-y: 0;
+  }
+}
