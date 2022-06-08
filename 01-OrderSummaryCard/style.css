@@ -21,27 +21,32 @@ body {
   width: 100%;
   height: 100%;
 }
-main {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/img/pattern-background-desktop.svg);
+  background-position-y: -10%;
+  background-repeat: no-repeat;
   background-color: var(--Pale-blue);
+  min-height: 100%;
+}
+main {
   height: 100%;
+  max-width: 95%;
 }
 .main-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 100%;
-  width: 100%;
-  max-width: 144rem;
+  max-width: 100rem;
   margin: 0 auto;
-  background-image: url(/img/pattern-background-desktop.svg);
-  background-position-y: -10%;
-  background-repeat: no-repeat;
   font-family: "Red Hat Display", sans-serif;
 }
 .card {
+  margin: 1rem auto;
+  max-width: 100%;
   width: 40rem;
-  max-height: 65rem;
-  max-width: 90%;
   border-radius: 3rem;
   background-color: white;
 }
@@ -50,6 +55,7 @@ img {
   display: block;
 }
 .hero {
+  object-fit: cover;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
 }
@@ -130,7 +136,7 @@ a {
 }
 
 @media (max-width: 375px) {
-  main {
+  .container {
     background-image: url(/img/pattern-background-mobile.svg);
     background-position-y: 0;
   }
