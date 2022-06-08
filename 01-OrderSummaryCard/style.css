@@ -134,8 +134,22 @@ a {
 .cancel:hover {
   color: var(--Dark-blue);
 }
+@media (max-width: 400px) {
+  .plano {
+    margin: 3rem 3rem;
+  }
+  .plano-anual {
+    grid-template-columns: auto auto;
+  }
+  .plano-anual img {
+    display: none;
+  }
+}
 
 @media (max-width: 375px) {
+  .plano {
+    margin: 3rem 1.5rem;
+  }
   .container {
     background-image: url(/img/pattern-background-mobile.svg);
     background-position-y: 0;
