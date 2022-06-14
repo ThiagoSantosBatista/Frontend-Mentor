@@ -44,8 +44,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    margin: 1rem;
+    min-height: 100%;
 }
 .main-principal{
     display: grid;
@@ -53,9 +52,11 @@ h2{
     grid-template-rows: auto auto;
     align-content: center;
     justify-content: center;
-    background: white;
     border-radius: 0.7rem;
     max-width: 70rem;
+    margin: 1rem;
+    background: white;
+
 }
 .principal-comunidade{
     display: grid;
@@ -121,4 +122,17 @@ h2{
     line-height: 1.7rem;
     font-size: 1.3rem;
     color: var(--texto-cinza);
+}
+
+@media (max-width: 410px){
+    .main-principal{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+    }
+    .principal-inscricao{
+        border-radius: 0;
+    }
+    .principal-sobre{
+        border-bottom-left-radius: 0.7rem;
+    }
 }
