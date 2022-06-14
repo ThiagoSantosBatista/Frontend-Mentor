@@ -1,0 +1,124 @@
+:root{
+    --primaria-azul: hsl(218, 22%, 67%);
+    --primaria-ciano: hsl(179, 62%, 43%);
+    --primaria-cianoclaro: hsl(179, 51%, 53%);
+    --secundaria-amarelo: hsl(71, 73%, 54%);
+    --texto-cinza: hsla(203, 44%, 93%, 0.795);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Karla', Arial;
+    color: white;
+    background-color: rgb(214, 230, 236);
+}
+body{
+    font-size: 1rem;
+}
+li{
+    list-style: none;
+}
+p{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+.container{
+    max-width: 144rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 1rem;
+}
+.main-principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-content: center;
+    justify-content: center;
+    background: white;
+    border-radius: 0.7rem;
+    max-width: 70rem;
+}
+.principal-comunidade{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 1rem;
+    grid-column: 1/-1;
+    padding: 3rem;
+    color: var(--primaria-azul);
+}
+.principal-comunidade h1{
+    margin-bottom: 1rem;
+    color: var(--primaria-ciano);
+}
+.principal-comunidade h2{
+    margin-bottom: 0.5rem;
+    color: var(--secundaria-amarelo);
+}
+.principal-inscricao{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    padding: 3rem;
+    border-bottom-left-radius: 0.7rem;
+    background-color: var(--primaria-ciano);
+    justify-items: start;
+}
+.valor{
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    position: relative;
+}
+.valor::after{
+    content: "por mês";
+    position: absolute;
+    bottom: 0.9rem;
+    right: -7rem;
+    font-size: 1.4rem;
+    color: var(--texto-cinza);
+}
+.principal-inscricao button{
+    margin-top: 2.5rem;
+    font-weight: 700;
+    justify-self: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 0.7rem;
+    color: white;
+    cursor: pointer;
+    background-color: var(--secundaria-amarelo);
+}
+.principal-inscricao button:hover{
+    background-color: hsl(71, 65%, 46%);
+}
+.principal-sobre{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0.7rem;
+    padding: 3rem;
+    border-bottom-right-radius: 0.7rem;
+    background-color: var(--primaria-cianoclaro);
+}
+.sobre-lista li{
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    color: var(--texto-cinza);
+}
