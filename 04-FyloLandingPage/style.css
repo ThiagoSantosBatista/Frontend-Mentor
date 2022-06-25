@@ -1,0 +1,62 @@
+:root {
+  --primaria-AzulEscuro: hsl(243, 87%, 12%);
+  --primaria-AzulDessaturado: hsl(238, 22%, 44%);
+  --Azul: hsl(224, 93%, 58%);
+  --Ciano: hsl(170, 45%, 43%);
+  --AzulAcinzentada: hsl(240, 75%, 98%);
+  --CinzaClaro: hsl(0, 0%, 75%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1rem;
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1.8rem;
+}
+.container {
+  max-width: 144rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  height: 10rem;
+}
+.header-menu {
+  display: flex;
+}
+.menu-item a {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+  padding: 2rem;
+  color: var(--primaria-AzulDessaturado);
+}
+.menu-item a:hover {
+  color: black;
+  border-bottom: 0.3rem solid black;
+  transition: 0.1s;
+}
+.header-logo {
+  width: 13rem;
+}
