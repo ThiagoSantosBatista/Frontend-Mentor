@@ -4,7 +4,7 @@
 Solução para o desafio de construir um componente de preços, do site: [Frontend Mentor](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc).
 
 ##  🖥️ Demonstração
-![](https://s4.aconvert.com/convert/p3r68-cdx67/as3es-9rt02.svg)
+![](/Resultados/SinglePrice.png)
 
 ## 🔗 Link do site
 https://tsb-singleprice.netlify.app/

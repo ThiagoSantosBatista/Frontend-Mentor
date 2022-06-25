@@ -4,7 +4,7 @@
 Essa é uma solução para o desafio do cartão de resumo do pedido do site: [Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj).
 
 ##  🖥️ Demonstração
-![](https://s4.aconvert.com/convert/p3r68-cdx67/a96l3-vb1mj.svg)
+![](/Resultados/Order_Summary.jpg)
 
 ## 🔗 Link do site
 https://tsb-ordersummarycard.netlify.app/
