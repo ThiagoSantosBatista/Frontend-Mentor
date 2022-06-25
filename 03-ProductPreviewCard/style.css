@@ -98,8 +98,8 @@ img {
   color: var(--neutra-white);
   background: var(--primaria-darkCyan);
 }
-.main-principal button:hover{
-    background-color: hsl(159, 38%, 22%);
+.main-principal button:hover {
+  background-color: hsl(159, 38%, 22%);
 }
 .carrinho {
   position: absolute;
@@ -107,4 +107,17 @@ img {
   top: 1.8rem;
   width: 1.7rem;
   display: inline-block;
+}
+
+@media (max-width: 610px) {
+  .main-principal {
+    flex-direction: column;
+    width: 40rem;
+  }
+  .perfume {
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    height: 25rem;
+    width: 100%;
+  }
 }
