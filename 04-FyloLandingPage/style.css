@@ -16,7 +16,9 @@ html {
 }
 body {
   font-size: 1rem;
+  font-family: "Raleway";
   min-height: 100vh;
+  color: var(--primaria-AzulEscuro);
 }
 img {
   max-width: 100%;
@@ -37,6 +39,10 @@ p {
   margin: 0 auto;
 }
 .header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +53,7 @@ p {
   display: flex;
 }
 .menu-item a {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin: 0.5rem;
   padding: 2rem;
   color: var(--primaria-AzulDessaturado);
@@ -59,4 +65,35 @@ p {
 }
 .header-logo {
   width: 13rem;
+}
+.main-container {
+  padding: 0 5rem;
+}
+.main-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.primario {
+  align-items: center;
+  height: calc(100vh - 4rem);
+}
+.primario-texto h1 {
+  width: 25ch;
+  font-size: 3rem;
+}
+.primario-texto p {
+  font-family: "Open Sans";
+  margin: 2rem 0;
+  width: 55ch;
+}
+.primario-texto input {
+  padding: 1rem 7rem 1rem 1rem;
+  margin-right: 1rem;
+}
+.primario-texto button {
+  padding: 1.2rem 5rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  background-color: var(--Azul);
 }
