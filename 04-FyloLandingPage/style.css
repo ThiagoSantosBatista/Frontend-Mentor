@@ -70,7 +70,7 @@ p {
 .header-logo {
   width: 13rem;
 }
-.main-conteudo {
+.main-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 5rem;
@@ -125,6 +125,10 @@ p {
   color: var(--Ciano);
   border-bottom: 0.1rem solid var(--Ciano);
 }
+.secundario-texto a:hover {
+  color: hsl(170, 74%, 67%);
+  border-color: hsl(170, 74%, 67%);
+}
 .secundario-texto a img {
   margin-left: 0.5rem;
   display: inline-block;
@@ -156,6 +160,7 @@ p {
 }
 .comentario-pessoa h3 {
   color: black;
+  letter-spacing: 0.1rem;
 }
 .comentario-pessoa p {
   font-size: 1rem;
@@ -168,7 +173,7 @@ p {
   border-radius: 50%;
   background: gray;
 }
-.main-conteudoFinal {
+.main-wrapperFinal {
   display: flex;
   justify-content: space-between;
   padding: 6rem 14rem 6rem 6rem;
@@ -179,6 +184,7 @@ p {
   font-size: 2.5rem;
 }
 .final-texto p {
+  font-family: "Open Sans";
   font-size: 1.5rem;
   max-width: 45ch;
   margin-top: 2rem;
@@ -205,8 +211,9 @@ p {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: auto auto;
-  row-gap: 2.5rem;
+  gap: 2.5rem;
   padding: 6rem;
+  justify-items: left;
   background-color: var(--primaria-AzulEscuro);
 }
 .footer-container img {
@@ -216,16 +223,24 @@ p {
   display: inline-block;
   vertical-align: middle;
 }
-.footer-conteudo {
+.footer-wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.footer-conteudo p,
+.footer-wrapper p,
 a {
   font-size: 1.5rem;
   color: var(--AzulAcinzentada);
 }
 .Link a {
-  display: block;
+  display: inline-block;
+}
+.footer-wrapper a:hover {
+  color: var(--Azul);
+}
+.footer-wrapperRedes img {
+  display: inline-block;
+  margin: 0.5rem;
+  vertical-align: middle;
 }
