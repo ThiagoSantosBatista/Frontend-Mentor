@@ -168,4 +168,34 @@ p {
   border-radius: 50%;
   background: gray;
 }
+.main-conteudoFinal{
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem;
+  color: var(--AzulAcinzentada);
+  background: var(--primaria-AzulDessaturado);
+}
+.final-texto h2{
+  font-size: 2.5rem;
+}
+.final-texto p{
+  font-size: 1.5rem;
+  max-width: 45ch;
+  margin-top: 2rem;
+}
+.final-form input{
+  display: block;
+  padding: 0.8rem 10rem 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+.final-form button{
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  background: var(--Azul);
+}
 
