@@ -202,7 +202,8 @@ a {
 }
 .final-form input {
   display: block;
-  padding: 1rem 14rem 1rem 1.5rem;
+  width: 32rem;
+  padding: 1rem;
   border-radius: 0.3rem;
   border: none;
 }
@@ -288,6 +289,9 @@ a {
     max-width: initial;
     font-size: 2.8rem;
   }
+  .comentario {
+    text-align: left;
+  }
   .p-texto {
     text-align: left;
     max-width: initial;
@@ -295,7 +299,7 @@ a {
   }
   .main-wrapperFinal {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     justify-content: center;
   }
   .comentario {
@@ -341,6 +345,53 @@ a {
     box-shadow: 0 0.5rem 0.5rem #f0eded;
   }
   .mobile-menu {
+    position: relative;
+  }
+  .header-menu.active .linha2 {
+    transform: rotate(135deg);
+    transition: 0.3s;
+  }
+  .header-menu.active .linha3 {
+    position: absolute;
+    transform: rotate(-135deg);
+    top: -0.8rem;
+    transition: 0.3s;
+  }
+  .header-menu.active .mobile-menu .linha1 {
+    display: none;
+  }
+  .mobile-menu {
     display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-wrapperFinal {
+    padding: 3rem;
+  }
+  .final-form input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .ilustracao {
+    width: 27rem;
+    object-fit: cover;
+  }
+  .comentario {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .ilustracao {
+    max-width: 24rem;
+  }
+  .main-wrapper,
+  .footer-container,
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
