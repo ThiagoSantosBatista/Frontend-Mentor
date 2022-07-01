@@ -48,7 +48,17 @@ a {
   box-shadow: 0 0.3rem 0.3rem #f0eded;
   background: #fafafa;
 }
-.header-menu {
+.mobile-menu div {
+  width: 3.2rem;
+  height: 0.2rem;
+  background-color: black;
+  margin: 0.8rem;
+}
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+.menu-list {
   display: flex;
   gap: 2rem;
 }
@@ -294,9 +304,6 @@ a {
   .secundario-texto .h1-texto {
     margin-top: 2rem;
   }
-  .secundario-texto a{
-
-  }
   .main-wrapper,
   .footer-container,
   .header-container {
@@ -311,8 +318,29 @@ a {
   .footer-wrapperContatos {
     grid-column: 1/-1;
   }
-  .footer-wrapperRedes{
+  .footer-wrapperRedes {
     grid-column: 1/-1;
     justify-self: center;
+  }
+  .menu-list {
+    display: none;
+  }
+  .header-menu.active .menu-list {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 5rem;
+    align-items: center;
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+    background: #fafafa;
+    box-shadow: 0 0.5rem 0.5rem #f0eded;
+  }
+  .mobile-menu {
+    display: block;
   }
 }
