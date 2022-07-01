@@ -418,6 +418,9 @@ a {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .header{
+    height: 8rem;
+  }
   .header-container {
     height: 8rem;
   }
@@ -426,6 +429,10 @@ a {
   }
   .primario {
     min-height: calc(100vh - 12rem);
+  }
+  .footer-container {
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
   }
 }
 
