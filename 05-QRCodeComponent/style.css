@@ -40,6 +40,7 @@ p {
     text-align: center;
     border-radius: 1rem;
     padding: 1.5rem;
+    margin: 1rem;
     box-shadow: 0 1rem 1rem var(--GrayishBlue); 
     background-color: var(--White);
 }
@@ -49,12 +50,12 @@ p {
 }
 .main--conteudo h1{
     padding: 1rem;
-    width: 20ch;
+    max-width: 20ch;
     color: var(--DarkBlue);
 }
 .main--conteudo p{
     padding-bottom: 3rem;
-    width: 25ch;
+    max-width: 25ch;
     color: var(--GrayishBlue);
 }
 
