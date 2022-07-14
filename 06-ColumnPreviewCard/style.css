@@ -17,3 +17,69 @@ font-family: 'Lexend Deca', sans-serif;*/
 html{
   font-size: 62.5%;
 }
+body{
+  min-height: 100vh;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--veryLightGray);
+}
+p{
+  font-size: 1.5rem;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 144rem;
+  padding: 1rem;
+
+}
+.main--container{
+  display: flex;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 29rem;
+  padding: 4rem;
+  line-height: 2.3rem;
+  color: var(--transparentWhite);
+}
+.sedans{
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background: var(--brightOrange);
+}
+.suvs{
+  background: var(--darkCyan);
+}
+.luxury{
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: var(--veryDarkCyan);
+}
+.card--subtitulo{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  color: var(--veryLightGray);
+}
+.card--button{
+  margin-top: 4rem;
+  font-weight: 700;
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+}
+.sedans button {
+  color: var(--brightOrange);
+}
+.suvs button {
+  color: var(--darkCyan);
+}
+.luxury button {
+  color: var(--veryDarkCyan);
+}
