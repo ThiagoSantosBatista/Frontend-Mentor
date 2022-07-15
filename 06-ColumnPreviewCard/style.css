@@ -9,35 +9,34 @@ font-family: 'Lexend Deca', sans-serif;*/
   --veryLightGray: hsl(0, 0%, 95%);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   font-size: 62.5%;
 }
-body{
+body {
   min-height: 100vh;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   background-color: var(--veryLightGray);
 }
-p{
+p {
   font-size: 1.5rem;
 }
-.container{
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   max-width: 144rem;
   padding: 1rem;
-
 }
-.main--container{
+.main--container {
   display: flex;
 }
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -47,31 +46,32 @@ p{
   line-height: 2.3rem;
   color: var(--transparentWhite);
 }
-.sedans{
+.sedans {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   background: var(--brightOrange);
 }
-.suvs{
+.suvs {
   background: var(--darkCyan);
 }
-.luxury{
+.luxury {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background: var(--veryDarkCyan);
 }
-.card--subtitulo{
+.card--subtitulo {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   color: var(--veryLightGray);
 }
-.card--button{
+.card--button {
   margin-top: 4rem;
   font-weight: 700;
   padding: 1.5rem 3rem;
   border-radius: 5rem;
-  border: none;
+  border: 0.2rem solid white;
+  background-color: white;
   cursor: pointer;
 }
 .sedans button {
@@ -82,4 +82,16 @@ p{
 }
 .luxury button {
   color: var(--veryDarkCyan);
+}
+.sedans button:hover {
+  color: white;
+  background: var(--brightOrange);
+}
+.suvs button:hover {
+  color: white;
+  background: var(--darkCyan);
+}
+.luxury button:hover {
+  color: white;
+  background: var(--veryDarkCyan);
 }
