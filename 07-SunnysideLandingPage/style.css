@@ -1,0 +1,115 @@
+:root {
+  --SoftRed: #ff7866;
+  --Yellow: #fad400;
+  --DarkDesaturatedCyan: #25564b;
+  --DarkBlue: #19536b;
+  --DarkModerateCyan: #458c7e;
+  --VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+  --VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+  --DarkGrayishBlue: hsl(232, 10%, 55%);
+  --GrayishBlue: hsl(210, 4%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  position: relative;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 9rem;
+}
+.header-box {
+  display: flex;
+  padding: 0 3rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 9rem;
+}
+.header--logo {
+  width: 15rem;
+  height: auto;
+  cursor: pointer;
+}
+.nav--links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.nav--item a{
+  padding: 1rem;
+  position: relative;
+  color: white;
+}
+.nav--item a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.9rem;
+  width: 0%;
+  height: 0.2rem;
+  background: white;
+  transition: 0.3s;
+}
+.nav--item:hover a::after{
+  width: 100%;
+}
+.nav--btn {
+  font-family: "Fraunces", serif;
+  padding: 1.5rem 3rem;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 3rem;
+  background-color: white;
+  transition: 0.3s;
+}
+.nav--btn:hover{
+  transform: scale(1.1);
+}
+.main--home {
+  display: grid;
+  place-items: center;
+  background-image: url(/img/desktop/image-header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 108rem;
+  background-repeat: no-repeat;
+}
+.home--principal {
+  display: grid;
+  place-items: center;
+  margin-bottom: 7rem;
+  gap: 5rem;
+}
+.home--principal h1 {
+  letter-spacing: 1rem;
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  color: white;
+}
