@@ -3,7 +3,7 @@
   --Yellow: #fad400;
   --DarkDesaturatedCyan: #25564b;
   --DarkBlue: #19536b;
-  --DarkModerateCyan: #3d8375;
+  --DarkModerateCyan: #5bbda9;
   --VeryDarkDesaturatedBlue: #23303e;
   --VeryDarkGrayishBlue: #5a636c;
   --DarkGrayishBlue: #818498;
@@ -47,24 +47,24 @@ img {
   z-index: 1000;
   transition: 0.3s;
 }
-.sticky{
+.sticky {
   background: #33aeeb;
   box-shadow: 0 0.2rem 0.5rem #1c84b8;
   height: 7rem;
 }
 .header-box {
   display: flex;
-  padding: 0 5%;
+  padding: 0 4%;
   align-items: center;
   justify-content: space-between;
   height: 9rem;
   transition: 0.3s;
 }
-.header.sticky .header-box{
+.header.sticky .header-box {
   height: 7rem;
 }
-.header--logo {
-  width: 15rem;
+.logo {
+  width: 18rem;
   height: auto;
   cursor: pointer;
 }
@@ -131,8 +131,8 @@ img {
   font-family: "Fraunces", serif;
   color: white;
 }
-.home--seta{
-  animation: seta 1s ease-in-out alternate infinite;
+.home--seta {
+  animation: seta 0.8s ease-in-out alternate infinite;
 }
 .main--principal {
   display: grid;
@@ -170,37 +170,39 @@ img {
 .textoUm--a:hover {
   color: var(--VeryDarkGrayishBlue);
 }
-.textoUm--a.aDois{
+.textoUm--a.aDois {
   border-color: var(--SoftRed);
 }
-.principal--final{
+.principal--services {
   position: relative;
 }
-.principal--textoDois{
+.principal--textoDois {
   position: absolute;
   top: 85%;
   left: 50%;
-  transform: translate(-50%,-85%);
+  transform: translate(-50%, -85%);
   text-align: center;
 }
-.principal--textoDois h3{
+.principal--textoDois h3 {
+  font-weight: 900;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   font-family: "Fraunces", serif;
 }
-.principal--textoDois.graph h3{
-  color: var(--DarkDesaturatedCyan)
+.principal--textoDois.graph h3 {
+  color: var(--DarkDesaturatedCyan);
 }
-.principal--textoDois.graph p{
-  color: var(--DarkModerateCyan)
+.principal--textoDois.graph p {
+  color: var(--DarkDesaturatedCyan);
 }
-.principal--textoDois.photo h3, .principal--textoDois.photo p{
-  color: var(--DarkBlue)
+.principal--textoDois.photo h3,
+.principal--textoDois.photo p {
+  color: var(--DarkBlue);
 }
-.testimonial{
+.main--testimonial {
   padding: 10rem 5rem;
 }
-.testimonial h2{
+.main--testimonial h2 {
   font-family: "Fraunces", serif;
   font-size: 3rem;
   text-align: center;
@@ -208,41 +210,74 @@ img {
   margin-bottom: 5rem;
   letter-spacing: 0.5rem;
   color: var(--DarkGrayishBlue);
-} 
-.testimonial p{
+}
+.main--testimonial p {
   color: var(--VeryDarkGrayishBlue);
 }
-.testimonial--clientes{
+.testimonial--clientes {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
 }
-.cliente{
+.cliente {
   display: grid;
   gap: 4rem;
   text-align: center;
   width: 35ch;
 }
-.cliente img{
+.cliente img {
   justify-self: center;
   border-radius: 50%;
   width: 10rem;
   height: auto;
 }
-.cliente--nome{
+.cliente--nome {
   font-family: "Fraunces", serif;
   font-size: 2rem;
 }
-.cliente--cargo{
+.cliente--cargo {
   color: var(--GrayishBlue);
 }
+.main--projetos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer {
+  padding: 5rem;
+  background: var(--DarkModerateCyan);
+}
+.footer--box {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
+  place-items: center;
+}
+.aFooter a {
+  font-size: 1.7rem;
+  position: relative;
+  color: var(--DarkDesaturatedCyan);
+}
+.nav--item.aFooter a::after {
+  bottom: 0.5rem;
+  background: var(--DarkDesaturatedCyan);
+}
+.nav--item:hover.aFooter a::after {
+  width: calc(100% - 2rem);
+}
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem;
+}
 
-@keyframes seta{
-  0%{
-     transform: translate(0, -3rem);
+@keyframes seta {
+  0% {
+    transform: translate(0, -3rem);
   }
-  100%{
+  100% {
     transform: translate(0, 0);
   }
 }
