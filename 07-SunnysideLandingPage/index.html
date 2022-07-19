@@ -15,13 +15,13 @@
 </head>
 
 <body>
-  <header id="#home" class="header">
+  <header  class="header">
     <div class="container">
       <div class="header-box">
         <a href="#home"><img class="header--logo" src="/img/logo.svg" alt="logo"></a>
         <nav class="header-nav">
           <ul class="nav--links">
-            <li class="nav--item"><a href="#">About </a></li>
+            <li class="nav--item"><a href="#about">About </a></li>
             <li class="nav--item"><a href="#">Services</a></li>
             <li class="nav--item"><a href="#">Projects</a></li>
             <li class="nav--item"><button class="nav--btn">Contact</button></li>
@@ -31,13 +31,45 @@
     </div>
   </header>
   <main class="main-box">
-    <section class="main--home">
+    <section id="home" class="main--home">
       <div class="home--principal">
-        <h1>We are creatives</h1>
+        <h1>we are creatives</h1>
         <img class="home--seta" src="/img/icon-arrow-down.svg"></img>
       </div>
     </section>
+    <div class="container">
+
+      <section id="about" class="main--principal">
+        <div class="principal--textoUm">
+          <h2 class="textoUm--h1">Transform your brand</h2>
+          <p class="textoUm--p">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <a class="textoUm--a" href="#">learn more</a>
+        </div>
+        <img src="/img/desktop/image-transform.jpg" alt="">
+        <img src="/img/desktop/image-stand-out.jpg" alt="">
+        <div class="principal--textoUm">
+          <h2 class="textoUm--h1">Stand out to the right audience</h2>
+          <p class="textoUm--p">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <a class="textoUm--a aDois" href="#">learn more</a>
+        </div>
+        <div class="principal--final">
+          <img src="/img/desktop/image-graphic-design.jpg" alt="">
+          <div class="principal--textoDois graph">
+            <h3>Graphic design</h3>
+            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+          </div>
+        </div>
+        <div class="principal--final">
+          <img src="/img/desktop/image-photography.jpg" alt="">
+          <div class="principal--textoDois photo">
+            <h3> Photography</h3>
+            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
+  <script src="/script.js"></script>
 </body>
 
 </html>

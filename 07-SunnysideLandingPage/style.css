@@ -3,11 +3,13 @@
   --Yellow: #fad400;
   --DarkDesaturatedCyan: #25564b;
   --DarkBlue: #19536b;
-  --DarkModerateCyan: #458c7e;
-  --VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
-  --VeryDarkGrayishBlue: hsl(213, 9%, 39%);
-  --DarkGrayishBlue: hsl(232, 10%, 55%);
-  --GrayishBlue: hsl(210, 4%, 67%);
+  --DarkModerateCyan: #3d8375;
+  --VeryDarkDesaturatedBlue: #23303e;
+  --VeryDarkGrayishBlue: #5a636c;
+  --DarkGrayishBlue: #818498;
+  --GrayishBlue: #a7abae;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -23,11 +25,14 @@ body {
   min-height: 100vh;
   font-size: 1.8rem;
   font-family: "Barlow", sans-serif;
+  line-height: 1.5;
   position: relative;
+  color: var(--VeryDarkDesaturatedBlue);
 }
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 .container {
   max-width: 144rem;
@@ -39,13 +44,24 @@ img {
   right: 0;
   width: 100%;
   height: 9rem;
+  z-index: 1000;
+  transition: 0.3s;
+}
+.sticky{
+  background: #33aeeb;
+  box-shadow: 0 0.2rem 1rem #1c84b8;
+  height: 7rem;
 }
 .header-box {
   display: flex;
-  padding: 0 3rem;
+  padding: 0 5%;
   align-items: center;
   justify-content: space-between;
   height: 9rem;
+  transition: 0.3s;
+}
+.header.sticky .header-box{
+  height: 7rem;
 }
 .header--logo {
   width: 15rem;
@@ -57,12 +73,12 @@ img {
   align-items: center;
   gap: 3rem;
 }
-.nav--item a{
+.nav--item a {
   padding: 1rem;
   position: relative;
   color: white;
 }
-.nav--item a::after{
+.nav--item a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -72,7 +88,7 @@ img {
   background: white;
   transition: 0.3s;
 }
-.nav--item:hover a::after{
+.nav--item:hover a::after {
   width: 100%;
 }
 .nav--btn {
@@ -83,10 +99,11 @@ img {
   cursor: pointer;
   font-weight: 700;
   border-radius: 3rem;
-  background-color: white;
   transition: 0.3s;
+  background-color: white;
+  color: var(--VeryDarkDesaturatedBlue);
 }
-.nav--btn:hover{
+.nav--btn:hover {
   transform: scale(1.1);
 }
 .main--home {
@@ -107,9 +124,70 @@ img {
 }
 .home--principal h1 {
   letter-spacing: 1rem;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 900;
   text-transform: uppercase;
   font-family: "Fraunces", serif;
   color: white;
 }
+.main--principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+.principal--textoUm {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 3rem;
+  max-width: 35ch;
+}
+.textoUm--h1 {
+  font-size: 3rem;
+  max-width: 15ch;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+.textoUm--p {
+  color: var(--VeryDarkGrayishBlue);
+}
+.textoUm--a {
+  font-family: "Fraunces", serif;
+  align-self: start;
+  padding: 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--VeryDarkDesaturatedBlue);
+  position: relative;
+  border-bottom: 0.3rem solid var(--Yellow);
+}
+.textoUm--a.aDois{
+  border-color: var(--SoftRed);
+}
+.principal--final{
+  position: relative;
+}
+.principal--textoDois{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%,-85%);
+  text-align: center;
+}
+.principal--textoDois h3{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: "Fraunces", serif;
+}
+.principal--textoDois.graph h3{
+  color: var(--DarkDesaturatedCyan)
+}
+.principal--textoDois.graph p{
+  color: var(--DarkModerateCyan)
+}
+.principal--textoDois.photo h3, .principal--textoDois.photo p{
+  color: var(--DarkBlue)
+}
+
