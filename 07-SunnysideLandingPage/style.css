@@ -8,7 +8,7 @@
   --VeryDarkGrayishBlue: #5a636c;
   --DarkGrayishBlue: #818498;
   --GrayishBlue: #a7abae;
-  scroll-padding-top: 9rem;
+  scroll-padding-top: 7rem;
   scroll-behavior: smooth;
 }
 * {
@@ -49,7 +49,7 @@ img {
 }
 .sticky{
   background: #33aeeb;
-  box-shadow: 0 0.2rem 1rem #1c84b8;
+  box-shadow: 0 0.2rem 0.5rem #1c84b8;
   height: 7rem;
 }
 .header-box {
@@ -74,6 +74,7 @@ img {
   gap: 3rem;
 }
 .nav--item a {
+  display: block;
   padding: 1rem;
   position: relative;
   color: white;
@@ -119,8 +120,8 @@ img {
 .home--principal {
   display: grid;
   place-items: center;
-  margin-bottom: 7rem;
   gap: 5rem;
+  margin-bottom: 7rem;
 }
 .home--principal h1 {
   letter-spacing: 1rem;
@@ -129,6 +130,9 @@ img {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
   color: white;
+}
+.home--seta{
+  animation: seta 1s ease-in-out alternate infinite;
 }
 .main--principal {
   display: grid;
@@ -144,7 +148,7 @@ img {
   gap: 3rem;
   max-width: 35ch;
 }
-.textoUm--h1 {
+.textoUm--h2 {
   font-size: 3rem;
   max-width: 15ch;
   font-family: "Fraunces", serif;
@@ -162,6 +166,9 @@ img {
   color: var(--VeryDarkDesaturatedBlue);
   position: relative;
   border-bottom: 0.3rem solid var(--Yellow);
+}
+.textoUm--a:hover {
+  color: var(--VeryDarkGrayishBlue);
 }
 .textoUm--a.aDois{
   border-color: var(--SoftRed);
@@ -190,4 +197,52 @@ img {
 .principal--textoDois.photo h3, .principal--textoDois.photo p{
   color: var(--DarkBlue)
 }
+.testimonial{
+  padding: 10rem 5rem;
+}
+.testimonial h2{
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  letter-spacing: 0.5rem;
+  color: var(--DarkGrayishBlue);
+} 
+.testimonial p{
+  color: var(--VeryDarkGrayishBlue);
+}
+.testimonial--clientes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.cliente{
+  display: grid;
+  gap: 4rem;
+  text-align: center;
+  width: 35ch;
+}
+.cliente img{
+  justify-self: center;
+  border-radius: 50%;
+  width: 10rem;
+  height: auto;
+}
+.cliente--nome{
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+}
+.cliente--cargo{
+  color: var(--GrayishBlue);
+}
 
+@keyframes seta{
+  0%{
+     transform: translate(0, -3rem);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
