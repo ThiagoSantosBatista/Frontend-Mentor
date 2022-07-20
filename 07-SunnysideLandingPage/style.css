@@ -107,13 +107,13 @@ img {
 .nav--btn:hover {
   transform: scale(1.1);
 }
-.mobile-menu{
+.mobile-menu {
   display: none;
   border: none;
   background: none;
   cursor: pointer;
 }
-.mobile-menu div{
+.mobile-menu div {
   height: 0.5rem;
   margin: 0.6rem;
   border-radius: 2rem;
@@ -121,22 +121,35 @@ img {
   background: white;
 }
 .main--home {
-  display: grid;
-  place-items: center;
-  background-image: url(/img/desktop/image-header.jpg);
-  background-position: center;
-  background-size: cover;
+  grid-template-rows: 1fr;
   height: 100vh;
   max-height: 108rem;
   background-repeat: no-repeat;
+  position: relative;
+}
+.home--img {
+  position: absolute;
+  height: 100vh;
+  max-height: 108rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 .home--principal {
   display: grid;
+  grid-template-rows: auto auto;
   place-items: center;
-  gap: 5rem;
-  margin-bottom: 7rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
 }
 .home--principal h1 {
+  margin-bottom: 5rem;
   letter-spacing: 1rem;
   font-size: 5rem;
   font-weight: 900;
@@ -149,26 +162,31 @@ img {
 }
 .main--principal {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: repeat(3, auto);
 }
 .principal--textoUm {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  margin: 0 auto;
+  max-height: 50rem;
+  height: 100%;
+  margin: auto;
+  padding: 6rem;
   gap: 3rem;
-  max-width: 35ch;
+  max-width: 55rem;
+}
+.about--img {
+  max-height: 50rem;
+  height: 100%;
 }
 .textoUm--h2 {
   font-size: 3rem;
   max-width: 15ch;
+  margin-bottom: 3rem;
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
 .textoUm--p {
   color: var(--VeryDarkGrayishBlue);
+  margin-bottom: 3rem;
 }
 .textoUm--a {
   font-family: "Fraunces", serif;
@@ -188,13 +206,23 @@ img {
 }
 .principal--services {
   position: relative;
+  height: 60rem;
+}
+.photography--img,
+.graphic--img,
+.about--img,
+.projects--img {
+  height: 100%;
+  width: 100%;
 }
 .principal--textoDois {
   position: absolute;
-  top: 85%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -85%);
+  transform: translate(-50%);
   text-align: center;
+  max-width: 40ch;
+  width: 100%;
 }
 .principal--textoDois h3 {
   font-weight: 900;
@@ -202,9 +230,7 @@ img {
   margin-bottom: 2rem;
   font-family: "Fraunces", serif;
 }
-.principal--textoDois.graph h3 {
-  color: var(--DarkDesaturatedCyan);
-}
+.principal--textoDois.graph h3,
 .principal--textoDois.graph p {
   color: var(--DarkDesaturatedCyan);
 }
@@ -229,9 +255,11 @@ img {
 }
 .testimonial--clientes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
+  row-gap: 8rem;
 }
 .cliente {
   display: grid;
@@ -257,7 +285,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
 }
 .footer {
-  padding: 5rem;
+  padding: 1rem;
   background: var(--DarkModerateCyan);
 }
 .footer--box {
@@ -266,26 +294,35 @@ img {
   gap: 2rem;
   place-items: center;
 }
-.aFooter a {
-  font-size: 1.7rem;
+.logoFooter {
+  margin-top: 3rem;
+  height: auto;
+  width: 15rem;
+  cursor: pointer;
+}
+.nav--linkFooter {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.nav--itemFooter a {
+  display: block;
+  padding: 1rem;
   position: relative;
   color: var(--DarkDesaturatedCyan);
 }
-.nav--item.aFooter a::after {
-  bottom: 0.5rem;
-  background: var(--DarkDesaturatedCyan);
+.nav--itemFooter a:hover {
+  color: white;
 }
-.nav--item:hover.aFooter a::after {
-  width: calc(100% - 2rem);
+.redes--nav {
+  margin: 3rem 0 5rem 0;
 }
 .redes {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin: 2rem;
 }
-
 @keyframes seta {
   0% {
     transform: translate(0, -3rem);
@@ -295,18 +332,21 @@ img {
   }
 }
 
-@media screen and (max-width: 850px){
-  .mobile-menu{
+@media screen and (max-width: 850px) {
+  .home--principal h1 {
+    font-size: 4rem;
+  }
+  .mobile-menu {
     display: block;
     position: relative;
   }
-  .nav--links{
+  .nav--links {
     display: none;
   }
-  .header-nav.ativo .nav--links{
+  .header-nav.ativo .nav--links {
     display: flex;
     flex-direction: column;
-    justify-content: start;  
+    justify-content: start;
     position: absolute;
     right: 0;
     gap: 0.2rem;
@@ -318,15 +358,15 @@ img {
     overflow-y: auto;
     z-index: 9999;
   }
-  .header-nav.ativo .nav--item{
+  .header-nav.ativo .nav--item {
     width: 90%;
     border-bottom: 0.3rem solid rgb(224, 224, 224);
     padding: 2rem;
   }
-  .header.sticky .header-nav.ativo .nav--links{
+  .header.sticky .header-nav.ativo .nav--links {
     height: calc(100vh - 7rem);
   }
-  .header.sticky .header-nav.ativo .nav--links{
+  .header.sticky .header-nav.ativo .nav--links {
     top: 7rem;
   }
   .header-nav.ativo .linha-2 {
@@ -342,11 +382,41 @@ img {
   .header-nav.ativo .linha-1 {
     display: none;
   }
-  .nav--item a{
+  .nav--item a {
     color: #1c84b8;
   }
   .nav--btn {
     background: #1c84b8;
     color: white;
+  }
+  .principal--textoDois {
+    max-width: 40ch;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .home--principal h1 {
+    font-size: 3.5rem;
+  }
+  .main--principal {
+    grid-template-columns: 1fr;
+  }
+  .principal--services {
+    height: 60rem;
+  }
+  .egg {
+    order: -1;
+  }
+  .main--projetos {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .main--testimonial h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .logo {
+    width: 12rem;
   }
 }
