@@ -3,11 +3,14 @@ Nesse repositório se encontra as soluções que realizei para os desafios propo
 ## Desafios Realizados
 | DESAFIO | LINK |
 |:-------|:----:|
+|Sunnyside Landing Page|https://tsb-sunnyside.netlify.app/|
 |Fylo Landing Page|https://tsb-fylo.netlify.app/|
 |Product Preview Card|https://tsb-productpreviewcard.netlify.app/|
 |Order Summary Card|https://tsb-ordersummarycard.netlify.app/|
 |Single Price|https://tsb-singleprice.netlify.app/|
 |QR Code Component|https://tsb-qrcodecomponent.netlify.app/|
-|Column Preview Card|https://tsb-columnpreviewcard.netlify.app/|
+
+
+
 
 
