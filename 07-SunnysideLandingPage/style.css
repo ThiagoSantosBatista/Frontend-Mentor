@@ -48,9 +48,9 @@ img {
   transition: 0.3s;
 }
 .sticky {
+  height: 7rem;
   background: #33aeeb;
   box-shadow: 0 0.2rem 0.5rem #1c84b8;
-  height: 7rem;
 }
 .header-box {
   display: flex;
@@ -86,19 +86,19 @@ img {
   left: 0.9rem;
   width: 0%;
   height: 0.2rem;
-  background: white;
   transition: 0.3s;
+  background: white;
 }
 .nav--item:hover a::after {
   width: 100%;
 }
 .nav--btn {
   font-family: "Fraunces", serif;
+  font-weight: 900;
   padding: 1.5rem 3rem;
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  font-weight: 700;
   border-radius: 3rem;
   transition: 0.3s;
   background-color: white;
@@ -152,9 +152,9 @@ img {
   margin-bottom: 5rem;
   letter-spacing: 1rem;
   font-size: 5rem;
+  font-family: "Fraunces", serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-family: "Fraunces", serif;
   color: white;
 }
 .home--seta {
@@ -166,6 +166,11 @@ img {
   grid-template-rows: repeat(3, auto);
 }
 .principal--textoUm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
   max-height: 50rem;
   height: 100%;
   margin: auto;
@@ -180,19 +185,17 @@ img {
 .textoUm--h2 {
   font-size: 3rem;
   max-width: 15ch;
-  margin-bottom: 3rem;
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
 .textoUm--p {
   color: var(--VeryDarkGrayishBlue);
-  margin-bottom: 3rem;
 }
 .textoUm--a {
   font-family: "Fraunces", serif;
+  font-weight: 900;
   align-self: start;
   padding: 0.5rem;
-  font-weight: 900;
   text-transform: uppercase;
   color: var(--VeryDarkDesaturatedBlue);
   position: relative;
@@ -225,10 +228,10 @@ img {
   width: 100%;
 }
 .principal--textoDois h3 {
+  font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-family: "Fraunces", serif;
 }
 .principal--textoDois.graph h3,
 .principal--textoDois.graph p {
@@ -243,6 +246,7 @@ img {
 }
 .main--testimonial h2 {
   font-family: "Fraunces", serif;
+  font-weight: 900;
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -275,6 +279,7 @@ img {
 }
 .cliente--nome {
   font-family: "Fraunces", serif;
+  font-weight: 900;
   font-size: 2rem;
 }
 .cliente--cargo {
@@ -396,7 +401,7 @@ img {
 }
 @media screen and (max-width: 750px) {
   .home--principal h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   .main--principal {
     grid-template-columns: 1fr;
@@ -418,5 +423,11 @@ img {
 @media screen and (max-width: 550px) {
   .logo {
     width: 12rem;
+  }
+  .principal--textoUm {
+    padding: 6rem 3rem;
+  }
+  .nav--linkFooter {
+    gap: 2rem;
   }
 }
