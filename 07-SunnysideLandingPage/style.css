@@ -107,6 +107,19 @@ img {
 .nav--btn:hover {
   transform: scale(1.1);
 }
+.mobile-menu{
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mobile-menu div{
+  height: 0.5rem;
+  margin: 0.6rem;
+  border-radius: 2rem;
+  width: 3.6rem;
+  background: white;
+}
 .main--home {
   display: grid;
   place-items: center;
@@ -279,5 +292,61 @@ img {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 850px){
+  .mobile-menu{
+    display: block;
+    position: relative;
+  }
+  .nav--links{
+    display: none;
+  }
+  .header-nav.ativo .nav--links{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;  
+    position: absolute;
+    right: 0;
+    gap: 0.2rem;
+    text-align: center;
+    top: 9rem;
+    height: calc(100vh - 9rem);
+    width: 100%;
+    background: white;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+  .header-nav.ativo .nav--item{
+    width: 90%;
+    border-bottom: 0.3rem solid rgb(224, 224, 224);
+    padding: 2rem;
+  }
+  .header.sticky .header-nav.ativo .nav--links{
+    height: calc(100vh - 7rem);
+  }
+  .header.sticky .header-nav.ativo .nav--links{
+    top: 7rem;
+  }
+  .header-nav.ativo .linha-2 {
+    transform: rotate(135deg);
+    transition: 0.3s;
+  }
+  .header-nav.ativo .linha-3 {
+    position: absolute;
+    transform: rotate(-135deg);
+    top: 0;
+    transition: 0.3s;
+  }
+  .header-nav.ativo .linha-1 {
+    display: none;
+  }
+  .nav--item a{
+    color: #1c84b8;
+  }
+  .nav--btn {
+    background: #1c84b8;
+    color: white;
   }
 }
