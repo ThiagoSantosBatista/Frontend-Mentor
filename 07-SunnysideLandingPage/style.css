@@ -113,7 +113,8 @@ img {
   background: none;
   cursor: pointer;
 }
-.mobile-menu div {
+.mobile-menu span {
+  display: block;
   height: 0.5rem;
   margin: 0.6rem;
   border-radius: 2rem;
@@ -227,17 +228,17 @@ img {
   max-width: 40ch;
   width: 100%;
 }
-.principal--textoDois h3 {
+.principal--textoDois h2 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
-.principal--textoDois.graph h3,
+.principal--textoDois.graph h2,
 .principal--textoDois.graph p {
   color: var(--DarkDesaturatedCyan);
 }
-.principal--textoDois.photo h3,
+.principal--textoDois.photo h2,
 .principal--textoDois.photo p {
   color: var(--DarkBlue);
 }
