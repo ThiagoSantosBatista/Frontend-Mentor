@@ -9,6 +9,7 @@ Nesse repositório se encontra as soluções que realizei para os desafios propo
 |Order Summary Card|https://tsb-ordersummarycard.netlify.app/|
 |Single Price|https://tsb-singleprice.netlify.app/|
 |QR Code Component|https://tsb-qrcodecomponent.netlify.app/|
+|Stats Preview Card|https://tsb-statspreviewcard.netlify.app/|
 
 
 
