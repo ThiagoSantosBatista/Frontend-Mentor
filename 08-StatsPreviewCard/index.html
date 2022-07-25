@@ -7,10 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats Preview Card</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
+    <main class="main">
+        <div class="card">
+            <picture class="card__imagens">
+                <source media="(min-width: 800px)" srcset="/img/image-header-desktop.jpg">
+                <img class="card__img" src="/img/image-header-mobile.jpg" alt="">
+            </picture>
+            <div class="card__texto">
+                <h1 class="card__titulo">Get <span class="card__titulo--roxo">insights</span> that help your business
+                    grow.</h1>
+                <p class="card__descricao card__descricao--cinza">Discover the benefits of data analytics and make
+                    better decisions regarding revenue, customer experience, and overall efficiency.</p>
+                <div class="card__dados-box">
+                    <div class="card__dados">
+                        <p class="card__num">10k+</p>
+                        <p class="card__info card__info--cinza">companies</p>
+                    </div>
+                    <div class="card__dados">
+                        <p class="card__num">314</p>
+                        <p class="card__info card__info--cinza">templates</p>
+                    </div>
+                    <div class="card__dados">
+                        <p class="card__num">12M+</p>
+                        <p class="card__info card__info--cinza">queries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
