@@ -35,9 +35,11 @@ img {
   max-width: 100rem;
 }
 .card {
+  max-width: 35rem;
   border-radius: 1rem;
   margin: 2rem;
   background-color: var(--DarkDesaturatedBlue);
+  box-shadow: 0 1rem 5rem 0.5rem black;
 }
 .card__imagens {
   position: relative;
@@ -54,14 +56,18 @@ img {
   background-color: rgba(83, 9, 129, 0.6);
 }
 .card__img {
+  height: 25.7rem;
+  width: auto;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 .card__texto {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
   text-align: center;
 }
 .card__titulo--roxo {
@@ -78,6 +84,9 @@ img {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .card__num {
   font-weight: 700;
@@ -92,4 +101,32 @@ img {
 .card__info--cinza {
   color: var(--SlightlyTransparentWhiteF);
   font-weight: 400;
+}
+
+@media screen and (min-width: 750px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+  .card__dados-box {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .card__imagens {
+    order: 1;
+  }
+  .card__imagens::after {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 1rem;
+  }
+  .card__img {
+    height: 39.7rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 1rem;
+  }
+  .card__texto {
+    text-align: left;
+    padding: 4rem;
+  }
 }
