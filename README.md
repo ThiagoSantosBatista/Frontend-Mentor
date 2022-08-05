@@ -10,7 +10,7 @@ Nesse repositório se encontra as soluções que realizei para os desafios propo
 |Single Price|https://tsb-singleprice.netlify.app/|
 |QR Code Component|https://tsb-qrcodecomponent.netlify.app/|
 |Stats Preview Card|https://tsb-statspreviewcard.netlify.app/|
-
+|Loopstudios Landing Page|https://tsb-loopstudios.netlify.app/|
 
 
 

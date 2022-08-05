@@ -1,5 +1,5 @@
 const mobileMenu = document.querySelector(".mobile-menu");
-const navItems = document.querySelectorAll(".header__nav-item");
+const navItems = document.querySelectorAll(".nav-item");
 
 function toggleMenu(event) {
   if (event.type === "touchstart") {
