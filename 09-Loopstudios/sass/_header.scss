@@ -39,7 +39,21 @@
     }
   }
 }
-.sticky {
+.mobile-menu {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  span {
+    display: block;
+    height: 0.3rem;
+    margin: 0.7rem;
+    border-radius: 2rem;
+    width: 3.6rem;
+    background: white;
+  }
+}
+.header.sticky {
   height: 7rem;
   background: $purple;
   box-shadow: 0 0.1rem 2rem $purple;

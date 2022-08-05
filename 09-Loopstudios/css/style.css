@@ -87,12 +87,27 @@ a {
   width: 90%;
 }
 
-.sticky {
+.mobile-menu {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mobile-menu span {
+  display: block;
+  height: 0.3rem;
+  margin: 0.7rem;
+  border-radius: 2rem;
+  width: 3.6rem;
+  background: white;
+}
+
+.header.sticky {
   height: 7rem;
   background: rgb(104, 13, 104);
   box-shadow: 0 0.1rem 2rem rgb(104, 13, 104);
 }
-.sticky .header__box {
+.header.sticky .header__box {
   height: 7rem;
 }
 
@@ -311,6 +326,66 @@ a {
   .footer__nav-list {
     margin-top: 1rem;
     flex-direction: column;
+  }
+  .header {
+    height: 10rem;
+    transition: 0s;
+  }
+  .header .header__box {
+    height: 10rem;
+    transition: 0s;
+  }
+  .mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 5;
+  }
+  .header__nav-list {
+    display: none;
+  }
+  body.ativo .header__nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+    position: absolute;
+    right: 0;
+    gap: 0.2rem;
+    text-align: center;
+    top: 0;
+    min-height: 100vh;
+    padding-top: 8rem;
+    width: 100%;
+    overflow-y: auto;
+    z-index: 4;
+    background: #000000;
+  }
+  body.ativo .header__nav-list .header__nav-item {
+    width: 100%;
+    padding: 1rem;
+  }
+  body.ativo .logo {
+    width: 15rem;
+    z-index: 10;
+  }
+  body.ativo .linha-2 {
+    transform: rotate(135deg);
+    transition: 0.3s;
+  }
+  body.ativo .linha-3 {
+    position: absolute;
+    transform: rotate(-135deg);
+    top: 0;
+    transition: 0.3s;
+  }
+  body.ativo .linha-1 {
+    display: none;
+  }
+  body.ativo .header {
+    height: 7rem;
+  }
+  body.ativo .header .header__box {
+    height: 7rem;
   }
 }
 @media screen and (max-width: 650px) {
