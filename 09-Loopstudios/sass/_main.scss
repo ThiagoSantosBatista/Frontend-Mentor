@@ -1,13 +1,15 @@
 .main__home {
-  height: 60rem;
+  height: 100vh;
+  max-height: 60rem;
   width: 100%;
   background-image: url(/img/desktop/image-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   &-text {
     display: grid;
-    height: 60rem;
-    padding: 0 9%;
+    height: 100vh;
+    max-height: 60rem;
+    padding: 0 var(--lados);
     align-items: center;
     h1 {
       @include font(true);
@@ -25,7 +27,7 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  padding: 12rem 9%;
+  padding: 12rem var(--lados);
   &__imagem {
     grid-column: 1/6;
     grid-row: 1/4;
@@ -57,13 +59,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 2rem;
-  padding: 10rem 9%;
+  padding: 10rem var(--lados);
   position: relative;
   &__titulo {
     @include font(true);
     position: absolute;
     top: 0;
-    left: 9%;
+    left: var(--lados);
     font-size: 3.5rem;
     color: $black;
   }
@@ -72,7 +74,7 @@
     text-transform: uppercase;
     position: absolute;
     top: 0;
-    right: 9%;
+    right: var(--lados);
     padding: 1rem 3rem;
     font-size: 1.6rem;
     cursor: pointer;
@@ -90,7 +92,6 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-
   &:hover img {
     transform: scale(1.15);
   }
@@ -107,6 +108,8 @@
   img {
     width: 100%;
     transition: 0.3s;
+    object-position: top;
+    height: 45rem;
   }
   h3 {
     @include font(true);

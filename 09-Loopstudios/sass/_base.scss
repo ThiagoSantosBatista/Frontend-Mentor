@@ -5,6 +5,9 @@ $darkGray: #8c8c8c;
 $veryDarkGray: #696969;
 $font-Principal: "Alata", sans-serif;
 $font-Secundaria: "Josefin Sans", sans-serif;
+:root{
+    --lados: 9%;
+}
 
 @mixin font($true: false) {
   font-family: $font-Secundaria;
@@ -49,3 +52,5 @@ a {
   max-width: 144rem;
   margin: 0 auto;
 }
+
+

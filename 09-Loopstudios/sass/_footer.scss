@@ -1,20 +1,30 @@
 .footer {
   background: $black;
-  padding: 3rem 9%;
+  padding: 3rem var(--lados);
   .footer__box {
     display: flex;
-    margin-top: 2rem;
     justify-content: space-between;
-  }
-  p {
-    font-size: 1.4rem;
-    color: $veryDarkGray;
+    .footer__box-el {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    p {
+      font-size: 1.4rem;
+      color: $veryDarkGray;
+    }
   }
 }
 .redes__nav-list,
 .footer__nav-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+}
+.redes__nav-list {
+  justify-content: end;
 }
 .footer__nav-item {
   cursor: pointer;

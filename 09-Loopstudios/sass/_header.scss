@@ -8,15 +8,17 @@
   transition: 0.3s;
   &__box {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: 12rem;
-    padding: 0 9%;
+    padding: 0 var(--lados);
     transition: 0.3s;
   }
 }
 .header__nav-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   a {
     padding: 1rem;

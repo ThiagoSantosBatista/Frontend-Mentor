@@ -1,3 +1,7 @@
+:root {
+  --lados: 9%;
+}
+
 *,
 *::after,
 *::before {
@@ -51,15 +55,17 @@ a {
 }
 .header__box {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 12rem;
-  padding: 0 9%;
+  padding: 0 var(--lados);
   transition: 0.3s;
 }
 
 .header__nav-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 .header__nav-list a {
@@ -91,7 +97,8 @@ a {
 }
 
 .main__home {
-  height: 60rem;
+  height: 100vh;
+  max-height: 60rem;
   width: 100%;
   background-image: url(/img/desktop/image-hero.jpg);
   background-size: cover;
@@ -99,8 +106,9 @@ a {
 }
 .main__home-text {
   display: grid;
-  height: 60rem;
-  padding: 0 9%;
+  height: 100vh;
+  max-height: 60rem;
+  padding: 0 var(--lados);
   align-items: center;
 }
 .main__home-text h1 {
@@ -120,7 +128,7 @@ a {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  padding: 12rem 9%;
+  padding: 12rem var(--lados);
 }
 .interactive__imagem {
   grid-column: 1/6;
@@ -155,7 +163,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 2rem;
-  padding: 10rem 9%;
+  padding: 10rem var(--lados);
   position: relative;
 }
 .creations__titulo {
@@ -164,7 +172,7 @@ a {
   text-transform: uppercase;
   position: absolute;
   top: 0;
-  left: 9%;
+  left: var(--lados);
   font-size: 3.5rem;
   color: #000000;
 }
@@ -173,7 +181,7 @@ a {
   text-transform: uppercase;
   position: absolute;
   top: 0;
-  right: 9%;
+  right: var(--lados);
   padding: 1rem 3rem;
   font-size: 1.6rem;
   cursor: pointer;
@@ -204,6 +212,8 @@ a {
 .creations__card img {
   width: 100%;
   transition: 0.3s;
+  object-position: top;
+  height: 45rem;
 }
 .creations__card h3 {
   font-family: "Josefin Sans", sans-serif;
@@ -219,14 +229,20 @@ a {
 
 .footer {
   background: #000000;
-  padding: 3rem 9%;
+  padding: 3rem var(--lados);
 }
 .footer .footer__box {
   display: flex;
-  margin-top: 2rem;
   justify-content: space-between;
 }
-.footer p {
+.footer .footer__box .footer__box-el {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.footer .footer__box p {
   font-size: 1.4rem;
   color: #696969;
 }
@@ -234,7 +250,12 @@ a {
 .redes__nav-list,
 .footer__nav-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+}
+
+.redes__nav-list {
+  justify-content: end;
 }
 
 .footer__nav-item {
@@ -245,6 +266,85 @@ a {
 }
 .footer__nav-item a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  :root {
+    --lados: 6%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .interactive {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    place-items: center;
+    text-align: center;
+    max-width: 73rem;
+  }
+  .interactive__imagem {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .interactive__imagem__img {
+    height: 50rem;
+    width: auto;
+  }
+  .interactive__text {
+    padding: 6rem 3rem 0;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+@media screen and (max-width: 850px) {
+  .main__home-text h1 {
+    font-size: 4rem;
+  }
+  .footer__box {
+    gap: 4rem;
+  }
+  .footer__box,
+.footer__box-el {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__nav-list {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main__home-text h1 {
+    font-size: 3.5rem;
+  }
+  .interactive {
+    padding: 10rem var(--lados);
+  }
+  .creations {
+    grid-template-columns: auto;
+    gap: 3rem;
+    margin-bottom: 6rem;
+    padding: 8rem var(--lados);
+  }
+  .creations__titulo {
+    width: 28.9rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .creations__btn {
+    position: absolute;
+    top: auto;
+    bottom: 1rem;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 5rem;
+  }
+  .creations__card img {
+    height: 24rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,85 @@
 @import "main";
 @import "footer";
 
+@media screen and (max-width: 1100px) {
+  :root {
+    --lados: 6%;
+  }
+}
 
+@media screen and (max-width: 1000px) {
+  .interactive {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    place-items: center;
+    text-align: center;
+    max-width: 73rem;
+    &__imagem {
+      grid-column: 1;
+      grid-row: 1;
+      &__img {
+        height: 50rem;
+        width: auto;
+      }
+    }
+    &__text {
+      padding: 6rem 3rem 0;
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .main__home-text h1 {
+    font-size: 4rem;
+  }
+  .footer__box {
+    gap: 4rem;
+  }
+  .footer__box,
+  .footer__box-el {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__nav-list {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+}
 
-
+@media screen and (max-width: 650px) {
+  .main__home-text h1 {
+    font-size: 3.5rem;
+  }
+  .interactive {
+    padding: 10rem var(--lados);
+  }
+  .creations {
+    grid-template-columns: auto;
+    gap: 3rem;
+    margin-bottom: 6rem;
+    padding: 8rem var(--lados);
+    &__titulo {
+      width: 28.9rem;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__btn {
+      position: absolute;
+      top: auto;
+      bottom: 1rem;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1rem 5rem;
+    }
+    &__card {
+      img {
+        height: 24rem;
+      }
+    }
+  }
+}
