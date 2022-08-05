@@ -1,0 +1,50 @@
+$white: #ffffff;
+$black: #000000;
+$darkGray: #8c8c8c;
+$veryDarkGray: #696969;
+$font-Principal: "Alata", sans-serif;
+$font-Secundaria: "Josefin Sans", sans-serif;
+
+@mixin font($true: false) {
+  font-family: $font-Secundaria;
+  font-weight: 300;
+  @if $true {
+    text-transform: uppercase;
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 12rem;
+}
+body {
+  min-height: 100vh;
+  font-family: $font-Principal;
+  font-size: 1.6rem;
+  position: relative;
+  color: $white;
+}
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+li {
+  list-style: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}

@@ -26,6 +26,15 @@ img {
   object-fit: cover;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .container {
   max-width: 144rem;
   margin: 0 auto;
@@ -39,7 +48,7 @@ img {
   height: 12rem;
   z-index: 2;
 }
-.header .header__box {
+.header__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,17 +58,14 @@ img {
 
 .header__nav-list {
   display: flex;
-  list-style: none;
   gap: 1.5rem;
 }
-.header__nav-list .header__nav-item a {
+.header__nav-list a {
   padding: 1rem;
-  display: inline-block;
-  text-decoration: none;
   color: #ffffff;
   position: relative;
 }
-.header__nav-list .header__nav-item a::after {
+.header__nav-list a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -69,7 +75,7 @@ img {
   background: #ffffff;
   transition: 0.3s;
 }
-.header__nav-list .header__nav-item a:hover::after {
+.header__nav-list a:hover::after {
   width: 90%;
 }
 
@@ -80,19 +86,19 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.main__home .main__home-text {
+.main__home-text {
   display: grid;
   height: 60rem;
   padding: 0 9%;
   align-items: center;
 }
-.main__home .main__home-text h1 {
+.main__home-text h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
   margin-top: 5rem;
   font-size: 5rem;
-  text-transform: uppercase;
   line-height: 1.2;
-  font-weight: 300;
-  font-family: "Josefin Sans", sans-serif;
   letter-spacing: 0.2rem;
   padding: 2rem 3rem;
   border: 0.1rem solid #ffffff;
@@ -105,15 +111,15 @@ img {
   grid-template-rows: repeat(3, 1fr);
   padding: 12rem 9%;
 }
-.interactive .interactive__imagem {
+.interactive__imagem {
   grid-column: 1/6;
   grid-row: 1/4;
 }
-.interactive .interactive__imagem .interactive__img {
+.interactive__imagem__img {
   height: 50rem;
   width: auto;
 }
-.interactive .interactive__text {
+.interactive__text {
   padding: 8rem;
   grid-column: 5/-1;
   grid-row: 2/-1;
@@ -121,16 +127,82 @@ img {
   background: #ffffff;
   color: #000000;
 }
-.interactive .interactive__text h2 {
-  font-size: 3.5rem;
-  text-transform: uppercase;
+.interactive__text h2 {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
 }
-.interactive .interactive__text p {
+.interactive__text p {
   font-size: 1.4rem;
   line-height: 1.5;
   color: #8c8c8c;
+}
+
+.creations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 2rem;
+  padding: 10rem 9%;
+  position: relative;
+}
+.creations__titulo {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 9%;
+  font-size: 3.5rem;
+  color: #000000;
+}
+.creations__btn {
+  font-family: "Alata", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 9%;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  color: #000000;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.creations__btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.creations__card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.creations__card:hover img {
+  transform: scale(1.15);
+}
+.creations__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4));
+}
+.creations__card img {
+  width: 100%;
+  transition: 0.3s;
+}
+.creations__card h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
