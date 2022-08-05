@@ -1,0 +1,27 @@
+.footer {
+  background: $black;
+  padding: 3rem 9%;
+  .footer__box {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+  p {
+    font-size: 1.4rem;
+    color: $veryDarkGray;
+  }
+}
+.redes__nav-list,
+.footer__nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.footer__nav-item {
+  cursor: pointer;
+  a {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -84,6 +84,7 @@ a {
 .sticky {
   height: 7rem;
   background: rgb(104, 13, 104);
+  box-shadow: 0 0.1rem 2rem rgb(104, 13, 104);
 }
 .sticky .header__box {
   height: 7rem;
@@ -209,10 +210,41 @@ a {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 2.5rem;
+  line-height: 1.2;
   position: absolute;
   bottom: 4rem;
   left: 4rem;
   z-index: 1;
+}
+
+.footer {
+  background: #000000;
+  padding: 3rem 9%;
+}
+.footer .footer__box {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+.footer p {
+  font-size: 1.4rem;
+  color: #696969;
+}
+
+.redes__nav-list,
+.footer__nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__nav-item {
+  cursor: pointer;
+}
+.footer__nav-item a {
+  color: #ffffff;
+}
+.footer__nav-item a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
