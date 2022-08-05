@@ -147,3 +147,17 @@
     }
   }
 }
+@media screen and (max-width: 400px) {
+  .main__home-text h1 {
+    font-size: 3rem;
+  }
+  .logo {
+    width: 16rem;
+  }
+  .interactive {
+    padding: 7rem var(--lados);
+  }
+  .creations__btn{
+    padding: 1rem 3rem;
+  }
+}
