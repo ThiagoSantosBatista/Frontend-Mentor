@@ -1,8 +1,8 @@
 .footer {
   background: $black;
-  padding: 3rem var(--lados);
   .footer__box {
     display: flex;
+    padding: 3rem var(--lados);
     justify-content: space-between;
     .footer__box-el {
       display: flex;

@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 1100px) {
   :root {
-    --lados: 6%;
+    --lados: 5rem;
   }
 }
 
@@ -32,6 +32,9 @@
   }
 }
 @media screen and (max-width: 850px) {
+  :root {
+    --lados: 3.5rem;
+  }
   .main__home-text h1 {
     font-size: 4rem;
   }
@@ -113,6 +116,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  :root {
+    --lados: 2rem;
+  }
   .main__home-text h1 {
     font-size: 3.5rem;
   }
@@ -148,7 +154,8 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .main__home-text h1, .interactive__text h2{
+  .main__home-text h1,
+  .interactive__text h2 {
     font-size: 2.8rem;
   }
   .creations__titulo {
@@ -161,7 +168,7 @@
   .interactive {
     padding: 7rem var(--lados);
   }
-  .creations__btn{
+  .creations__btn {
     padding: 1rem 3rem;
   }
 }

@@ -1,5 +1,5 @@
 :root {
-  --lados: 9%;
+  --lados: 9rem;
 }
 
 *,
@@ -244,10 +244,10 @@ a {
 
 .footer {
   background: #000000;
-  padding: 3rem var(--lados);
 }
 .footer .footer__box {
   display: flex;
+  padding: 3rem var(--lados);
   justify-content: space-between;
 }
 .footer .footer__box .footer__box-el {
@@ -285,7 +285,7 @@ a {
 
 @media screen and (max-width: 1100px) {
   :root {
-    --lados: 6%;
+    --lados: 5rem;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -311,6 +311,9 @@ a {
   }
 }
 @media screen and (max-width: 850px) {
+  :root {
+    --lados: 3.5rem;
+  }
   .main__home-text h1 {
     font-size: 4rem;
   }
@@ -389,6 +392,9 @@ a {
   }
 }
 @media screen and (max-width: 650px) {
+  :root {
+    --lados: 2rem;
+  }
   .main__home-text h1 {
     font-size: 3.5rem;
   }
@@ -422,7 +428,8 @@ a {
   }
 }
 @media screen and (max-width: 400px) {
-  .main__home-text h1, .interactive__text h2 {
+  .main__home-text h1,
+.interactive__text h2 {
     font-size: 2.8rem;
   }
   .creations__titulo {

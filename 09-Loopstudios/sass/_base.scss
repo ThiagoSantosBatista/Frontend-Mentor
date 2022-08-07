@@ -6,7 +6,7 @@ $veryDarkGray: #696969;
 $font-Principal: "Alata", sans-serif;
 $font-Secundaria: "Josefin Sans", sans-serif;
 :root{
-    --lados: 9%;
+    --lados: 9rem;
 }
 
 @mixin font($true: false) {
