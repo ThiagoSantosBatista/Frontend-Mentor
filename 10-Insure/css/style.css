@@ -66,6 +66,7 @@ img {
 
 .header.sticky {
   height: 6rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .main {
@@ -111,19 +112,6 @@ img {
   margin-bottom: 2.5rem;
   color: rgba(255, 255, 255, 0.8);
 }
-.introducao__conteudo button {
-  font-size: 1.4rem;
-  font-weight: 700;
-  padding: 0 var(--pd);
-  background: none;
-  padding: 1.3rem 3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  cursor: pointer;
-  color: white;
-  background: hsl(256deg, 26%, 20%);
-  border: 0.15rem solid white;
-}
 .introducao__conteudo .detalhe-esq {
   position: absolute;
   top: 0;
@@ -154,6 +142,20 @@ img {
   z-index: 2;
 }
 
+.btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0 var(--pd);
+  background: none;
+  padding: 1.3rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  color: white;
+  background: hsl(256deg, 26%, 20%);
+  border: 0.15rem solid white;
+}
+
 .beneficios {
   padding: 0 var(--pd);
   text-align: center;
@@ -181,6 +183,33 @@ img {
 .ben p {
   font-size: 1.4rem;
   color: hsl(273deg, 4%, 51%);
+}
+
+.final {
+  margin: 10rem 2rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  background: hsl(256deg, 26%, 20%);
+  position: relative;
+  z-index: -2;
+}
+.final .detalhe {
+  position: absolute;
+  top: 0;
+  width: 15.2rem;
+  z-index: -1;
+  right: 0;
+}
+.final__box {
+  z-index: 1;
+}
+.final__box h2 {
+  font-weight: 400;
+  margin-bottom: 3rem;
+  font-size: clamp(3.5rem, 11vw, 5rem);
+  letter-spacing: 0.1rem;
+  font-family: "DM Serif Display", serif;
 }
 
 /*# sourceMappingURL=style.css.map */
