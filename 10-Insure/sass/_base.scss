@@ -5,8 +5,8 @@ $DarkGrayishViolet: hsl(273, 4%, 51%);
 $VeryLightGray: hsl(0, 0%, 98%);
 $fonte-principal: "Karla", sans-serif;
 $fonte-secundaria: "DM Serif Display", serif;
-:root{
-    --pd: 2rem;
+:root {
+  --pd: 2rem;
 }
 
 *,
@@ -19,6 +19,7 @@ $fonte-secundaria: "DM Serif Display", serif;
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 body {
   min-height: 100vh;
@@ -39,4 +40,17 @@ img {
 .container {
   max-width: 144rem;
   margin: 0 auto;
+}
+.btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0 var(--pd);
+  background: none;
+  padding: 1.3rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  color: white;
+  background: $DarkViolet;
+  border: 0.15rem solid white;
 }

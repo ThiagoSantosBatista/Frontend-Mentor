@@ -17,20 +17,27 @@
     <header class="header">
         <div class="header__box container">
             <a href="#"><img src="/img/logo.svg" alt="logo"></a>
-            <nav class="nav">
-                <button class="nav__btn">
-                    <img src="/img/icon-hamburger.svg" alt="" class="nav__menu">
+            <nav class="nav-header">
+                <button  id="mobile-menu" class="nav-header__btn">
+                    <img src="/img/icon-hamburger.svg" alt="" class="mobile-menu__open">
+                    <img src="/img/icon-close.svg" alt="" class="mobile-menu__close">
                 </button>
+                <ul class="nav-header__list">
+                    <li class="nav-header__item"><a href="#work-dois">How we work</a></li>
+                    <li class="nav-header__item"><a href="#work-um">Blog</a></li>
+                    <li class="nav-header__item"><a href="#work-tres">Account</a></li>
+                    <li class="nav-header__item"><button class="header__btn btn">View plans</button></li>
+                </ul>
             </nav>
         </div>
     </header>
     <main class="main">
-        <section id="work" class="introducao">
+        <section class="introducao">
             <div class="introducao__box container">
                 <picture class="introducao__img">
                     <img src="/img/image-intro-mobile.jpg" alt="">
                 </picture>
-                <div class="introducao__conteudo">
+                <div id="work-dois" class="introducao__conteudo">
                     <img src="/img/bg-pattern-intro-left-mobile.svg" alt="" class="detalhe-esq">
                     <div class="introducao__conteudo-box">
                         <h1>Humanizing your insurance.</h1>
@@ -45,7 +52,7 @@
                 </div>
             </div>
         </section>
-        <section class="beneficios container">
+        <section id="work-tres" class="beneficios container">
             <h2>We’re different</h2>
             <div class="beneficios__box">
                 <div class="ben">
@@ -71,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <section class="final container">
+        <section id="work-um" class="final container">
             <img src="/img/bg-pattern-how-we-work-mobile.svg" alt="" class="detalhe">
             <div class="final__box">
                 <h2> Find out more<br> about how we work</h2>
@@ -85,11 +92,15 @@
             <a href="#"><img src="/img/logo.svg" alt="logo" width="112"></a>
             <div class="social__redes">
                 <nav>
-                    <ul class="nav-redes">
-                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-facebook.svg" alt="" width="24" height="24"></a></li>
-                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-twitter.svg" alt="" width="24" height="24"></a></li>
-                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-pinterest.svg" alt="" width="24" height="24"></a></li>
-                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-instagram.svg" alt="" width="24" height="24"></a></li>
+                    <ul class="nav-redes__list">
+                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-facebook.svg" alt="" width="24"
+                                    height="24"></a></li>
+                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-twitter.svg" alt="" width="24"
+                                    height="24"></a></li>
+                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-pinterest.svg" alt="" width="24"
+                                    height="24"></a></li>
+                        <li class="nav-redes__item"><a href="#"><img src="/img/icon-instagram.svg" alt="" width="24"
+                                    height="24"></a></li>
                     </ul>
                 </nav>
             </div>
@@ -97,8 +108,8 @@
         </div>
         <div class="footer__conteudo container">
             <div class="company">
-                <nav>
-                    <ul class="nav-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-footer__list">
                         <h4>Our company</h4>
                         <li class="nav-footer__item"><a href="#">How we work</a></li>
                         <li class="nav-footer__item"><a href="#">Why Insure?</a></li>
@@ -108,8 +119,8 @@
                 </nav>
             </div>
             <div>
-                <nav>
-                    <ul class="nav-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-footer__list">
                         <h4>Help me</h4>
                         <li class="nav-footer__item"><a href="#">FAQ</a></li>
                         <li class="nav-footer__item"><a href="#">Terms of use</a></li>
@@ -119,8 +130,8 @@
                 </nav>
             </div>
             <div>
-                <nav>
-                    <ul class="nav-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-footer__list">
                         <h4>Contact</h4>
                         <li class="nav-footer__item"><a href="#">Sales</a></li>
                         <li class="nav-footer__item"><a href="#">Support</a></li>
@@ -129,8 +140,8 @@
                 </nav>
             </div>
             <div>
-                <nav>
-                    <ul class="nav-footer">
+                <nav class="nav-footer">
+                    <ul class="nav-footer__list">
                         <h4>Others </h4>
                         <li class="nav-footer__item"><a href="#">Careers</a></li>
                         <li class="nav-footer__item"><a href="#">Press</a></li>

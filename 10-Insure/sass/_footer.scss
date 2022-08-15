@@ -18,7 +18,7 @@
   padding-top: 0;
   gap: 2.5rem;
   position: relative;
-  .nav-redes {
+  .nav-redes__list {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -41,13 +41,15 @@
   margin-top: 4rem;
   place-items: center;
   text-align: center;
-  .nav-footer {
+  .nav-footer__list {
     h4 {
       color: $DarkGrayishViolet;
       text-transform: uppercase;
       margin-bottom: 2rem;
+      font-size: 1.8rem;
     }
-    &__item a {
+    .nav-footer__item a {
+        font-size: 1.5rem;
       text-transform: uppercase;
       margin: 0.5rem;
       letter-spacing: 0.1rem;
