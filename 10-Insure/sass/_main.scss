@@ -5,8 +5,9 @@
   background: $DarkViolet;
   &__box {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    place-items: center;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    justify-content: center;
   }
   &__img {
     width: 100%;
@@ -18,20 +19,21 @@
   &__conteudo {
     display: grid;
     place-items: center;
-    padding: 0 2rem;
     height: 100%;
     text-align: center;
     position: relative;
     color: white;
     h1 {
       font-family: $fonte-secundaria;
+      padding: 0 2rem;
       font-weight: 400;
-      font-size: 4rem;
+      font-size: clamp(4rem, 12vw, 6rem);
       margin-bottom: 1.5rem;
       line-height: 1.2;
     }
     p {
-      font-size: 1.4rem;
+      padding: 0 2rem;
+      font-size: clamp(1.4rem, 4.5vw, 2rem);
       line-height: 1.5;
       margin-bottom: 2.5rem;
       color: rgba(255, 255, 255, 0.8);
@@ -39,25 +41,43 @@
     button {
       font-size: 1.4rem;
       font-weight: 700;
+      padding: 0 2rem;
       background: none;
       padding: 1.3rem 3rem;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       color: white;
+      background: $DarkViolet;
       border: 0.15rem solid white;
     }
     .detalhe-esq {
       position: absolute;
       top: 0;
       left: 0;
+      width: 14.4rem;
     }
     .detalhe-dir {
       position: absolute;
-      bottom: -17rem;
+      bottom: 0;
       right: 0;
+      width: 10rem;
+    }
+    .detalhe-bg {
+      height: 14rem;
+      width: 100%;
+      background: white;
+      z-index: 0;
+    }
+    .detalhe-linha{
+        position: absolute;
+        bottom: 3rem;
+        height: .1rem;
+        width: 50%;
+        background: $DarkGrayishViolet;
     }
     &-box {
-      z-index: 1;
+      padding: 6rem 0;
+      z-index: 2;
     }
   }
 }

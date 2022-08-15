@@ -42,7 +42,8 @@ img {
   left: 0;
   width: 100%;
   height: 9rem;
-  z-index: 2;
+  z-index: 3;
+  transition: all 0.3s;
   background: white;
 }
 .header__box {
@@ -50,12 +51,17 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  transition: all 0.1s;
   padding: 0 2rem;
 }
 
 .nav__btn {
   border: none;
   cursor: pointer;
+}
+
+.header.sticky {
+  height: 6rem;
 }
 
 .main {
@@ -67,8 +73,9 @@ img {
 }
 .introducao__box {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  place-items: center;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-content: center;
 }
 .introducao__img {
   width: 100%;
@@ -80,7 +87,6 @@ img {
 .introducao__conteudo {
   display: grid;
   place-items: center;
-  padding: 0 2rem;
   height: 100%;
   text-align: center;
   position: relative;
@@ -88,13 +94,15 @@ img {
 }
 .introducao__conteudo h1 {
   font-family: "DM Serif Display", serif;
+  padding: 0 2rem;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: clamp(4rem, 12vw, 6rem);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 .introducao__conteudo p {
-  font-size: 1.4rem;
+  padding: 0 2rem;
+  font-size: clamp(1.4rem, 4.5vw, 2rem);
   line-height: 1.5;
   margin-bottom: 2.5rem;
   color: rgba(255, 255, 255, 0.8);
@@ -102,25 +110,43 @@ img {
 .introducao__conteudo button {
   font-size: 1.4rem;
   font-weight: 700;
+  padding: 0 2rem;
   background: none;
   padding: 1.3rem 3rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: white;
+  background: hsl(256deg, 26%, 20%);
   border: 0.15rem solid white;
 }
 .introducao__conteudo .detalhe-esq {
   position: absolute;
   top: 0;
   left: 0;
+  width: 14.4rem;
 }
 .introducao__conteudo .detalhe-dir {
   position: absolute;
-  bottom: -17rem;
+  bottom: 0;
   right: 0;
+  width: 10rem;
+}
+.introducao__conteudo .detalhe-bg {
+  height: 14rem;
+  width: 100%;
+  background: white;
+  z-index: 0;
+}
+.introducao__conteudo .detalhe-linha {
+  position: absolute;
+  bottom: 3rem;
+  height: 0.1rem;
+  width: 50%;
+  background: hsl(273deg, 4%, 51%);
 }
 .introducao__conteudo-box {
-  z-index: 1;
+  padding: 6rem 0;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
