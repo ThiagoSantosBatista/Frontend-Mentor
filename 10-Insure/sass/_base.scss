@@ -5,6 +5,9 @@ $DarkGrayishViolet: hsl(273, 4%, 51%);
 $VeryLightGray: hsl(0, 0%, 98%);
 $fonte-principal: "Karla", sans-serif;
 $fonte-secundaria: "DM Serif Display", serif;
+:root{
+    --pd: 2rem;
+}
 
 *,
 *::after,

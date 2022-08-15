@@ -25,14 +25,14 @@
     color: white;
     h1 {
       font-family: $fonte-secundaria;
-      padding: 0 2rem;
+      padding: 0 var(--pd);
       font-weight: 400;
       font-size: clamp(4rem, 12vw, 6rem);
       margin-bottom: 1.5rem;
       line-height: 1.2;
     }
     p {
-      padding: 0 2rem;
+      padding: 0 var(--pd);
       font-size: clamp(1.4rem, 4.5vw, 2rem);
       line-height: 1.5;
       margin-bottom: 2.5rem;
@@ -41,11 +41,12 @@
     button {
       font-size: 1.4rem;
       font-weight: 700;
-      padding: 0 2rem;
+      padding: 0 var(--pd);
       background: none;
       padding: 1.3rem 3rem;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
+      cursor: pointer;
       color: white;
       background: $DarkViolet;
       border: 0.15rem solid white;
@@ -68,16 +69,43 @@
       background: white;
       z-index: 0;
     }
-    .detalhe-linha{
-        position: absolute;
-        bottom: 3rem;
-        height: .1rem;
-        width: 50%;
-        background: $DarkGrayishViolet;
+    .detalhe-linha {
+      position: absolute;
+      bottom: 3rem;
+      height: 0.1rem;
+      width: 50%;
+      background: $DarkGrayishViolet;
     }
     &-box {
       padding: 6rem 0;
       z-index: 2;
     }
+  }
+}
+.beneficios {
+  padding: 0 var(--pd);
+  text-align: center;
+  h2 {
+    margin-bottom: 6rem;
+    font-size: clamp(3.5rem, 11vw, 5rem);
+    letter-spacing: 0.1rem;
+    font-family: $fonte-secundaria;
+    color: $VeryDarkViolet;
+  }
+}
+.ben {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  h3 {
+    font-family: $fonte-secundaria;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    color: $DarkViolet;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1.4rem;
+    color: $DarkGrayishViolet;
   }
 }

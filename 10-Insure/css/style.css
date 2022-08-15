@@ -1,3 +1,7 @@
+:root {
+  --pd: 2rem;
+}
+
 *,
 *::after,
 *::before {
@@ -52,7 +56,7 @@ img {
   align-items: center;
   height: 100%;
   transition: all 0.1s;
-  padding: 0 2rem;
+  padding: 0 var(--pd);
 }
 
 .nav__btn {
@@ -94,14 +98,14 @@ img {
 }
 .introducao__conteudo h1 {
   font-family: "DM Serif Display", serif;
-  padding: 0 2rem;
+  padding: 0 var(--pd);
   font-weight: 400;
   font-size: clamp(4rem, 12vw, 6rem);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 .introducao__conteudo p {
-  padding: 0 2rem;
+  padding: 0 var(--pd);
   font-size: clamp(1.4rem, 4.5vw, 2rem);
   line-height: 1.5;
   margin-bottom: 2.5rem;
@@ -110,11 +114,12 @@ img {
 .introducao__conteudo button {
   font-size: 1.4rem;
   font-weight: 700;
-  padding: 0 2rem;
+  padding: 0 var(--pd);
   background: none;
   padding: 1.3rem 3rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  cursor: pointer;
   color: white;
   background: hsl(256deg, 26%, 20%);
   border: 0.15rem solid white;
@@ -147,6 +152,35 @@ img {
 .introducao__conteudo-box {
   padding: 6rem 0;
   z-index: 2;
+}
+
+.beneficios {
+  padding: 0 var(--pd);
+  text-align: center;
+}
+.beneficios h2 {
+  margin-bottom: 6rem;
+  font-size: clamp(3.5rem, 11vw, 5rem);
+  letter-spacing: 0.1rem;
+  font-family: "DM Serif Display", serif;
+  color: hsl(270deg, 9%, 17%);
+}
+
+.ben {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.ben h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  color: hsl(256deg, 26%, 20%);
+  font-weight: 400;
+}
+.ben p {
+  font-size: 1.4rem;
+  color: hsl(273deg, 4%, 51%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,7 +13,7 @@
     align-items: center;
     height: 100%;
     transition: all 0.1s;
-    padding: 0 2rem;
+    padding: 0 var(--pd);
   }
 }
 .nav__btn {
