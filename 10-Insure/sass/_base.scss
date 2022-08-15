@@ -1,3 +1,11 @@
+$DarkViolet: hsl(256, 26%, 20%);
+$GrayishBlue: hsl(216, 30%, 68%);
+$VeryDarkViolet: hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$fonte-principal: "Karla", sans-serif;
+$fonte-secundaria: "DM Serif Display", serif;
+
 *,
 *::after,
 *::before {
@@ -5,55 +13,27 @@
   padding: 0;
   margin: 0;
 }
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
 body {
   min-height: 100vh;
-  font-family: "Karla", sans-serif;
+  font-family: $fonte-principal;
   font-size: 1.6rem;
 }
-
 a {
   display: inline-block;
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
-
 img {
   display: block;
   max-width: 100%;
 }
-
 .container {
   max-width: 144rem;
   margin: 0 auto;
 }
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 9rem;
-}
-.header__box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: 0 2rem;
-}
-
-.nav__btn {
-  border: none;
-  cursor: pointer;
-}
-
-/*# sourceMappingURL=style.css.map */
