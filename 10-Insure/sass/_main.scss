@@ -1,0 +1,63 @@
+.main {
+  padding-top: 9rem;
+}
+.introducao {
+  background: $DarkViolet;
+  &__box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__conteudo {
+    display: grid;
+    place-items: center;
+    padding: 0 2rem;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+    h1 {
+      font-family: $fonte-secundaria;
+      font-weight: 400;
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    button {
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: none;
+      padding: 1.3rem 3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: white;
+      border: 0.15rem solid white;
+    }
+    .detalhe-esq {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .detalhe-dir {
+      position: absolute;
+      bottom: -17rem;
+      right: 0;
+    }
+    &-box {
+      z-index: 1;
+    }
+  }
+}

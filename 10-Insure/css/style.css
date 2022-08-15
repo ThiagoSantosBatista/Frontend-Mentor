@@ -42,6 +42,8 @@ img {
   left: 0;
   width: 100%;
   height: 9rem;
+  z-index: 2;
+  background: white;
 }
 .header__box {
   display: flex;
@@ -54,6 +56,71 @@ img {
 .nav__btn {
   border: none;
   cursor: pointer;
+}
+
+.main {
+  padding-top: 9rem;
+}
+
+.introducao {
+  background: hsl(256deg, 26%, 20%);
+}
+.introducao__box {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+.introducao__img {
+  width: 100%;
+}
+.introducao__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.introducao__conteudo {
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+.introducao__conteudo h1 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.introducao__conteudo p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.introducao__conteudo button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: none;
+  padding: 1.3rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: white;
+  border: 0.15rem solid white;
+}
+.introducao__conteudo .detalhe-esq {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.introducao__conteudo .detalhe-dir {
+  position: absolute;
+  bottom: -17rem;
+  right: 0;
+}
+.introducao__conteudo-box {
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
