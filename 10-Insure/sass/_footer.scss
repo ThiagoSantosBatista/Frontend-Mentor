@@ -8,6 +8,9 @@
     top: 0;
     left: 0;
     z-index: -1;
+    max-width: 56rem;
+    width: 100%;
+    height: auto;
   }
 }
 .social {
@@ -30,18 +33,21 @@
     right: 0;
     margin: auto;
     height: 0.1rem;
-    width: 90%;
+    width: calc(100% - var(--pd) * 2);
     background: $DarkGrayishViolet;
   }
 }
 .footer__conteudo {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
   margin-top: 4rem;
-  place-items: center;
+  padding: 0 var(--pd);
   text-align: center;
   .nav-footer__list {
+    width: 15rem;
     h4 {
       color: $DarkGrayishViolet;
       text-transform: uppercase;
@@ -49,7 +55,7 @@
       font-size: 1.8rem;
     }
     .nav-footer__item a {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
       margin: 0.5rem;
       letter-spacing: 0.1rem;

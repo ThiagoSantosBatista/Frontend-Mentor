@@ -18,7 +18,7 @@
         <div class="header__box container">
             <a href="#"><img src="/img/logo.svg" alt="logo"></a>
             <nav class="nav-header">
-                <button  id="mobile-menu" class="nav-header__btn">
+                <button id="mobile-menu" class="nav-header__btn">
                     <img src="/img/icon-hamburger.svg" alt="" class="mobile-menu__open">
                     <img src="/img/icon-close.svg" alt="" class="mobile-menu__close">
                 </button>
@@ -34,11 +34,19 @@
     <main class="main">
         <section class="introducao">
             <div class="introducao__box container">
+                <picture>
+                    <source media="(min-width: 550px)" srcset="/img/bg-pattern-intro-left-desktop.svg">
+                    <img src="/img/bg-pattern-intro-left-mobile.svg" alt="" class="detalhe-esq">
+                </picture>
+                <picture>
+                    <source media="(min-width: 550px)" srcset="/img/bg-pattern-intro-right-desktop.svg">
+                    <img src="/img/bg-pattern-intro-right-mobile.svg" alt="" class="detalhe-dir">
+                </picture>
                 <picture class="introducao__img">
+                    <source media="(min-width:375px)" srcset="/img/image-intro-desktop.jpg">
                     <img src="/img/image-intro-mobile.jpg" alt="">
                 </picture>
                 <div id="work-dois" class="introducao__conteudo">
-                    <img src="/img/bg-pattern-intro-left-mobile.svg" alt="" class="detalhe-esq">
                     <div class="introducao__conteudo-box">
                         <h1>Humanizing your insurance.</h1>
                         <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to
@@ -46,9 +54,7 @@
                             you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
                         <button class="btn">View plans</button>
                     </div>
-                    <div class="detalhe-bg"></div>
                     <div class="detalhe-linha"></div>
-                    <img src="/img/bg-pattern-intro-right-mobile.svg" alt="" class="detalhe-dir">
                 </div>
             </div>
         </section>
@@ -56,21 +62,21 @@
             <h2>We’re different</h2>
             <div class="beneficios__box">
                 <div class="ben">
-                    <img src="/img/icon-snappy-process.svg" alt="">
+                    <img src="/img/icon-snappy-process.svg" alt="" width="86" height="86">
                     <h3>Snappy Process</h3>
                     <p>Our application process can be completed in minutes, not hours. Don’t get stuck filling in
                         tedious
                         forms.</p>
                 </div>
                 <div class="ben">
-                    <img src="/img/icon-affordable-prices.svg" alt="">
+                    <img src="/img/icon-affordable-prices.svg" alt="" width="86" height="86">
                     <h3>Affordable Prices</h3>
                     <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer
                         the
                         best coverage possible.</p>
                 </div>
                 <div class="ben">
-                    <img src="/img/icon-people-first.svg" alt="">
+                    <img src="/img/icon-people-first.svg" alt="" width="86" height="86">
                     <h3>People First</h3>
                     <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered
                         when
@@ -79,15 +85,21 @@
             </div>
         </section>
         <section id="work-um" class="final container">
-            <img src="/img/bg-pattern-how-we-work-mobile.svg" alt="" class="detalhe">
-            <div class="final__box">
+            <picture>
+                <source media="(min-width:1050px)" srcset="/img/bg-pattern-how-we-work-desktop.svg">
+                <img src="/img/bg-pattern-how-we-work-mobile.svg" alt="" class="detalhe">
+            </picture>
+            <div class="final__box ">
                 <h2> Find out more<br> about how we work</h2>
                 <button class="btn">How we work</button>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <img src="/img/bg-pattern-footer-mobile.svg" alt="" class="detalhe">
+        <picture>
+            <source media="(min-width:500px)" srcset="/img/bg-pattern-footer-desktop.svg">
+            <img src="/img/bg-pattern-footer-mobile.svg" alt="" class="detalhe">
+        </picture>
         <div class="social container">
             <a href="#"><img src="/img/logo.svg" alt="logo" width="112"></a>
             <div class="social__redes">

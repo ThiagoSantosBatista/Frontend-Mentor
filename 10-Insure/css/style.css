@@ -136,18 +136,33 @@ body.ativo .nav-header__list {
 
 .introducao {
   background: hsl(256deg, 26%, 20%);
+  box-shadow: inset 0 -14rem white;
 }
 .introducao__box {
   display: grid;
   grid-template-rows: auto 1fr;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.introducao__box .detalhe-esq {
+  position: absolute;
+  top: 45.1rem;
+  left: 0;
+  width: 14.4rem;
+}
+.introducao__box .detalhe-dir {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10rem;
 }
 .introducao__img {
   width: 100%;
 }
 .introducao__img img {
   width: 100%;
+  height: 45.1rem;
   object-fit: cover;
 }
 .introducao__conteudo {
@@ -155,35 +170,24 @@ body.ativo .nav-header__list {
   place-items: center;
   height: 100%;
   text-align: center;
-  position: relative;
+  padding: 0 var(--pd);
   color: white;
 }
 .introducao__conteudo h1 {
   font-family: "DM Serif Display", serif;
-  padding: 0 var(--pd);
   font-weight: 400;
   font-size: clamp(4rem, 12vw, 6rem);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 .introducao__conteudo p {
-  padding: 0 var(--pd);
   font-size: clamp(1.4rem, 4.5vw, 2rem);
   line-height: 1.5;
   margin-bottom: 2.5rem;
   color: rgba(255, 255, 255, 0.8);
 }
-.introducao__conteudo .detalhe-esq {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 14.4rem;
-}
-.introducao__conteudo .detalhe-dir {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 10rem;
+.introducao__conteudo button {
+  margin-bottom: 14rem;
 }
 .introducao__conteudo .detalhe-bg {
   height: 14rem;
@@ -204,10 +208,10 @@ body.ativo .nav-header__list {
 }
 
 .beneficios {
-  padding: 0 var(--pd);
   text-align: center;
 }
 .beneficios h2 {
+  padding: 0 var(--pd);
   margin-bottom: 6rem;
   font-size: clamp(3.5rem, 11vw, 5rem);
   letter-spacing: 0.1rem;
@@ -217,14 +221,15 @@ body.ativo .nav-header__list {
 .beneficios__box {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  align-items: center;
+  padding: 0 var(--pd);
+  gap: 2rem;
+  align-content: center;
   justify-content: center;
 }
 
 .ben {
   display: grid;
-  place-items: center;
+  justify-items: center;
   max-width: 35rem;
   margin-bottom: 4rem;
 }
@@ -239,14 +244,14 @@ body.ativo .nav-header__list {
   font-weight: 400;
 }
 .ben p {
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 4.5vw, 2rem);
   color: hsl(273deg, 4%, 51%);
 }
 
 .final {
-  margin: 10rem 2rem;
-  padding: 5rem 2rem;
   text-align: center;
+  margin: 10rem auto;
+  padding: 0 var(--pd);
   color: white;
   background: hsl(256deg, 26%, 20%);
   position: relative;
@@ -259,6 +264,12 @@ body.ativo .nav-header__list {
   z-index: -1;
   right: 0;
 }
+.final__box {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  align-items: center;
+}
 .final__box h2 {
   font-weight: 400;
   margin-bottom: 3rem;
@@ -266,7 +277,74 @@ body.ativo .nav-header__list {
   letter-spacing: 0.1rem;
   font-family: "DM Serif Display", serif;
 }
+.final__box button {
+  align-self: center;
+}
 
+@media screen and (min-width: 1210px) {
+  .beneficios {
+    text-align: left;
+  }
+  .beneficios__box {
+    justify-content: start;
+    gap: 4rem;
+  }
+  .ben {
+    display: block;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .final .detalhe {
+    width: 43.4rem;
+  }
+  .final__box {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25rem;
+    text-align: left;
+    padding: 1rem 6rem;
+  }
+  .final__box h2 {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 850px) {
+  .introducao__box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .introducao__img {
+    order: 1;
+  }
+  .introducao__conteudo {
+    text-align: left;
+  }
+  .introducao__conteudo button {
+    margin: 0 var(--pd);
+  }
+  .introducao .beneficios__box {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 550px) {
+  .introducao__box .detalhe-esq {
+    top: 82rem;
+    left: 0;
+    width: 10.8rem;
+  }
+  .introducao__box .detalhe-dir {
+    top: 0;
+    right: 0;
+    width: 20.6rem;
+    max-width: auto;
+  }
+  .introducao__img {
+    display: grid;
+  }
+  .introducao__img img {
+    justify-self: center;
+    width: 54rem;
+  }
+}
 .footer {
   z-index: -2;
   position: relative;
@@ -278,6 +356,9 @@ body.ativo .nav-header__list {
   top: 0;
   left: 0;
   z-index: -1;
+  max-width: 56rem;
+  width: 100%;
+  height: auto;
 }
 
 .social {
@@ -301,17 +382,22 @@ body.ativo .nav-header__list {
   right: 0;
   margin: auto;
   height: 0.1rem;
-  width: 90%;
+  width: calc(100% - var(--pd) * 2);
   background: hsl(273deg, 4%, 51%);
 }
 
 .footer__conteudo {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
   margin-top: 4rem;
-  place-items: center;
+  padding: 0 var(--pd);
   text-align: center;
+}
+.footer__conteudo .nav-footer__list {
+  width: 15rem;
 }
 .footer__conteudo .nav-footer__list h4 {
   color: hsl(273deg, 4%, 51%);
@@ -326,6 +412,23 @@ body.ativo .nav-header__list {
   letter-spacing: 0.1rem;
   color: hsl(256deg, 26%, 20%);
   font-weight: 700;
+}
+
+@media screen and (min-width: 730px) {
+  :root {
+    --pd: 6rem;
+  }
+}
+@media screen and (min-width: 730px) {
+  .social {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__conteudo {
+    justify-content: flex-start;
+    text-align: left;
+    gap: 3.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
