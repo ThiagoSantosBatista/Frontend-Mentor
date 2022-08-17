@@ -20,11 +20,13 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  overflow-y: scroll;
 }
 body {
   min-height: 100vh;
   font-family: $fonte-principal;
   font-size: 1.6rem;
+  position: relative;
 }
 a {
   display: inline-block;

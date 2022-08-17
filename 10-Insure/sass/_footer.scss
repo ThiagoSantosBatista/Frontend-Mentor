@@ -71,3 +71,34 @@
     }
   }
 }
+body.js {
+  [data-aos] {
+    opacity: 0;
+    transition: 0.3s;
+  }
+  [data-aos="apDois"] {
+    margin-top: 5rem;
+  }
+  [data-aos="right"] {
+    margin-left: 5rem;
+  }
+  [data-aos="ap"] {
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  [data-aos="right"].animacao {
+    opacity: 1;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  [data-aos="ap"].animacao {
+    opacity: 1;
+  }
+
+  [data-aos="apDois"].animacao {
+    margin-top: 0;
+    opacity: 1;
+  }
+}

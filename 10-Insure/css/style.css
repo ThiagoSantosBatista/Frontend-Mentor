@@ -14,12 +14,14 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  overflow-y: scroll;
 }
 
 body {
   min-height: 100vh;
   font-family: "Karla", sans-serif;
   font-size: 1.6rem;
+  position: relative;
 }
 
 a {
@@ -316,24 +318,6 @@ body.ativo .nav-header__list {
   color: hsl(270deg, 9%, 17%);
 }
 
-[data-aos] {
-  opacity: 0;
-  transition: 0.5s;
-}
-
-[data-aos=left] {
-  transform: translate3d(-50px, 0, 0);
-}
-
-[data-aos=right] {
-  transform: translate3d(50px, 0, 0);
-}
-
-[data-aos].animacao {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
 .footer {
   z-index: 1;
   position: relative;
@@ -408,6 +392,33 @@ body.ativo .nav-header__list {
 }
 .footer__conteudo .nav-footer__list .nav-footer__item a:hover {
   text-decoration: underline;
+}
+
+body.js [data-aos] {
+  opacity: 0;
+  transition: 0.3s;
+}
+body.js [data-aos=apDois] {
+  margin-top: 5rem;
+}
+body.js [data-aos=right] {
+  margin-left: 5rem;
+}
+body.js [data-aos=ap] {
+  opacity: 0;
+  transition: 0.5s;
+}
+body.js [data-aos=right].animacao {
+  opacity: 1;
+  margin-right: 0;
+  margin-left: 0;
+}
+body.js [data-aos=ap].animacao {
+  opacity: 1;
+}
+body.js [data-aos=apDois].animacao {
+  margin-top: 0;
+  opacity: 1;
 }
 
 @media screen and (min-width: 550px) {
