@@ -3,6 +3,8 @@ Nesse repositório se encontra as soluções que realizei para os desafios propo
 ## Desafios Realizados
 | DESAFIO | LINK |
 |:-------|:----:|
+|Insure Landing Page|https://tsb-insure.netlify.app/|
+|Loopstudios Landing Page|https://tsb-loopstudios.netlify.app/|
 |Sunnyside Landing Page|https://tsb-sunnyside.netlify.app/|
 |Fylo Landing Page|https://tsb-fylo.netlify.app/|
 |Product Preview Card|https://tsb-productpreviewcard.netlify.app/|
@@ -10,7 +12,7 @@ Nesse repositório se encontra as soluções que realizei para os desafios propo
 |Single Price|https://tsb-singleprice.netlify.app/|
 |QR Code Component|https://tsb-qrcodecomponent.netlify.app/|
 |Stats Preview Card|https://tsb-statspreviewcard.netlify.app/|
-|Loopstudios Landing Page|https://tsb-loopstudios.netlify.app/|
+
 
 
 
