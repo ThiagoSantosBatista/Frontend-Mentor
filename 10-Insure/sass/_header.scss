@@ -9,11 +9,9 @@
   z-index: 10;
   &.sticky {
     height: 6rem;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
     .nav-header__list {
       padding-top: 6rem;
-    }
-    & .header__box {
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
   }
   &__box {
@@ -74,5 +72,39 @@ body.ativo {
   }
   .nav-header__list {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-header__btn {
+    display: none;
+  }
+  .header.sticky .nav-header__list {
+    padding: 0;
+  }
+  .nav-header {
+    &__list {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      background: none;
+      position: static;
+      min-height: auto;
+      padding: 0;
+      gap: 1rem;
+    }
+    &__item {
+      a {
+        color: $VeryDarkViolet;
+        padding: 1rem;
+      }
+      .header__btn {
+        padding: 1rem 1.5rem;
+        background: white;
+        color: $VeryDarkViolet;
+        border: 0.2rem solid $VeryDarkViolet;
+      }
+    }
   }
 }

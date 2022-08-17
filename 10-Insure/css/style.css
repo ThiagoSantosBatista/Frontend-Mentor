@@ -67,12 +67,10 @@ img {
 }
 .header.sticky {
   height: 6rem;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
 }
 .header.sticky .nav-header__list {
   padding-top: 6rem;
-}
-.header.sticky .header__box {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 .header__box {
   background: white;
@@ -130,6 +128,35 @@ body.ativo .nav-header__list {
   display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-header__btn {
+    display: none;
+  }
+  .header.sticky .nav-header__list {
+    padding: 0;
+  }
+  .nav-header__list {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: none;
+    position: static;
+    min-height: auto;
+    padding: 0;
+    gap: 1rem;
+  }
+  .nav-header__item a {
+    color: hsl(270deg, 9%, 17%);
+    padding: 1rem;
+  }
+  .nav-header__item .header__btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    color: hsl(270deg, 9%, 17%);
+    border: 0.2rem solid hsl(270deg, 9%, 17%);
+  }
+}
 .main {
   padding-top: 9rem;
 }
@@ -137,6 +164,7 @@ body.ativo .nav-header__list {
 .introducao {
   background: hsl(256deg, 26%, 20%);
   box-shadow: inset 0 -14rem white;
+  z-index: -1;
 }
 .introducao__box {
   display: grid;
@@ -148,6 +176,7 @@ body.ativo .nav-header__list {
 .introducao__box .detalhe-esq {
   position: absolute;
   top: 45.1rem;
+  z-index: 1;
   left: 0;
   width: 14.4rem;
 }
@@ -156,6 +185,7 @@ body.ativo .nav-header__list {
   bottom: 0;
   right: 0;
   width: 10rem;
+  z-index: 1;
 }
 .introducao__img {
   width: 100%;
@@ -172,6 +202,7 @@ body.ativo .nav-header__list {
   text-align: center;
   padding: 0 var(--pd);
   color: white;
+  z-index: 2;
 }
 .introducao__conteudo h1 {
   font-family: "DM Serif Display", serif;
@@ -193,7 +224,6 @@ body.ativo .nav-header__list {
   height: 14rem;
   width: 100%;
   background: white;
-  z-index: 0;
 }
 .introducao__conteudo .detalhe-linha {
   position: absolute;
@@ -203,17 +233,19 @@ body.ativo .nav-header__list {
   background: hsl(273deg, 4%, 51%);
 }
 .introducao__conteudo-box {
-  padding: 6rem 0;
+  margin: 6rem 0;
   z-index: 2;
 }
 
 .beneficios {
   text-align: center;
+  z-index: 1;
 }
 .beneficios h2 {
   padding: 0 var(--pd);
   margin-bottom: 6rem;
   font-size: clamp(3.5rem, 11vw, 5rem);
+  z-index: 2;
   letter-spacing: 0.1rem;
   font-family: "DM Serif Display", serif;
   color: hsl(270deg, 9%, 17%);
@@ -230,7 +262,7 @@ body.ativo .nav-header__list {
 .ben {
   display: grid;
   justify-items: center;
-  max-width: 35rem;
+  max-width: 30rem;
   margin-bottom: 4rem;
 }
 .ben img {
@@ -239,36 +271,38 @@ body.ativo .nav-header__list {
 .ben h3 {
   margin-bottom: 1rem;
   font-family: "DM Serif Display", serif;
-  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-size: clamp(2.5rem, 8vw, 3rem);
   color: hsl(256deg, 26%, 20%);
   font-weight: 400;
 }
 .ben p {
-  font-size: clamp(1.4rem, 4.5vw, 2rem);
+  font-size: clamp(1.4rem, 4.5vw, 1.7rem);
   color: hsl(273deg, 4%, 51%);
 }
 
 .final {
   text-align: center;
   margin: 10rem auto;
-  padding: 0 var(--pd);
   color: white;
-  background: hsl(256deg, 26%, 20%);
-  position: relative;
-  z-index: -2;
-}
-.final .detalhe {
-  position: absolute;
-  top: 0;
-  width: 15.2rem;
-  z-index: -1;
-  right: 0;
 }
 .final__box {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
+  margin: 0 var(--pd);
   align-items: center;
+}
+.final__box .detalhe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15.2rem;
+  z-index: -1;
+}
+.final__box--bg {
+  background: hsl(256deg, 26%, 20%);
+  z-index: -1;
 }
 .final__box h2 {
   font-weight: 400;
@@ -281,16 +315,75 @@ body.ativo .nav-header__list {
   align-self: center;
 }
 
-@media screen and (min-width: 1210px) {
-  .beneficios {
+@media screen and (min-width: 550px) {
+  .introducao__box .detalhe-esq {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 8.8rem;
+  }
+  .introducao__box .detalhe-dir {
+    top: 0;
+    right: 0;
+    width: 20.6rem;
+    max-width: auto;
+  }
+  .introducao__box .detalhe-linha {
+    width: 23rem;
+  }
+  .introducao__img {
+    display: grid;
+  }
+  .introducao__img img {
+    justify-self: center;
+    width: 54rem;
+  }
+}
+@media screen and (min-width: 850px) {
+  .introducao {
+    box-shadow: inset 0 -18rem white;
+  }
+  .introducao__box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .introducao__box .detalhe-esq {
+    width: 10.8rem;
+  }
+  .introducao__img {
+    padding: 5rem var(--pd) 5rem 0;
+    margin-bottom: 5rem;
+    order: 1;
+  }
+  .introducao__img img {
+    width: auto;
+    height: 65rem;
+  }
+  .introducao__conteudo {
     text-align: left;
   }
+  .introducao__conteudo-box {
+    padding: 1rem 0;
+  }
+  .introducao__conteudo button {
+    margin-bottom: 18rem;
+  }
+  .introducao__conteudo .detalhe-linha {
+    inset: 6rem auto auto var(--pd);
+    width: 20%;
+  }
+  .introducao .beneficios__box {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .beneficios {
+    text-align: center;
+  }
   .beneficios__box {
-    justify-content: start;
     gap: 4rem;
   }
   .ben {
-    display: block;
+    width: 28rem;
   }
 }
 @media screen and (min-width: 1050px) {
@@ -308,45 +401,8 @@ body.ativo .nav-header__list {
     margin: 0;
   }
 }
-@media screen and (min-width: 850px) {
-  .introducao__box {
-    grid-template-columns: 1fr 1fr;
-  }
-  .introducao__img {
-    order: 1;
-  }
-  .introducao__conteudo {
-    text-align: left;
-  }
-  .introducao__conteudo button {
-    margin: 0 var(--pd);
-  }
-  .introducao .beneficios__box {
-    gap: 5rem;
-  }
-}
-@media screen and (min-width: 550px) {
-  .introducao__box .detalhe-esq {
-    top: 82rem;
-    left: 0;
-    width: 10.8rem;
-  }
-  .introducao__box .detalhe-dir {
-    top: 0;
-    right: 0;
-    width: 20.6rem;
-    max-width: auto;
-  }
-  .introducao__img {
-    display: grid;
-  }
-  .introducao__img img {
-    justify-self: center;
-    width: 54rem;
-  }
-}
 .footer {
-  z-index: -2;
+  z-index: 1;
   position: relative;
   padding: 7rem 0;
   background: hsl(0deg, 0%, 98%);
@@ -416,10 +472,10 @@ body.ativo .nav-header__list {
 
 @media screen and (min-width: 730px) {
   :root {
-    --pd: 6rem;
+    --pd: 4rem;
   }
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 770px) {
   .social {
     flex-direction: row;
     justify-content: space-between;
@@ -427,7 +483,6 @@ body.ativo .nav-header__list {
   .footer__conteudo {
     justify-content: flex-start;
     text-align: left;
-    gap: 3.5rem;
   }
 }
 

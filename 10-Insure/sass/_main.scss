@@ -4,6 +4,7 @@
 .introducao {
   background: $DarkViolet;
   box-shadow: inset 0 -14rem white;
+  z-index: -1;
   &__box {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -13,6 +14,7 @@
     .detalhe-esq {
       position: absolute;
       top: 45.1rem;
+      z-index: 1;
       left: 0;
       width: 14.4rem;
     }
@@ -21,6 +23,7 @@
       bottom: 0;
       right: 0;
       width: 10rem;
+      z-index: 1;
     }
   }
   &__img {
@@ -38,6 +41,7 @@
     text-align: center;
     padding: 0 var(--pd);
     color: white;
+    z-index: 2;
     h1 {
       font-family: $fonte-secundaria;
       font-weight: 400;
@@ -58,7 +62,6 @@
       height: 14rem;
       width: 100%;
       background: white;
-      z-index: 0;
     }
     .detalhe-linha {
       position: absolute;
@@ -68,7 +71,7 @@
       background: $DarkGrayishViolet;
     }
     &-box {
-      padding: 6rem 0;
+      margin: 6rem 0;
       z-index: 2;
     }
   }
@@ -76,10 +79,12 @@
 
 .beneficios {
   text-align: center;
+  z-index: 1;
   h2 {
     padding: 0 var(--pd);
     margin-bottom: 6rem;
     font-size: clamp(3.5rem, 11vw, 5rem);
+    z-index: 2;
     letter-spacing: 0.1rem;
     font-family: $fonte-secundaria;
     color: $VeryDarkViolet;
@@ -96,7 +101,7 @@
 .ben {
   display: grid;
   justify-items: center;
-  max-width: 35rem;
+  max-width: 30rem;
   margin-bottom: 4rem;
   img {
     margin-bottom: 2rem;
@@ -104,35 +109,38 @@
   h3 {
     margin-bottom: 1rem;
     font-family: $fonte-secundaria;
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-size: clamp(2.5rem, 8vw, 3rem);
     color: $DarkViolet;
     font-weight: 400;
   }
   p {
-    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    font-size: clamp(1.4rem, 4.5vw, 1.7rem);
     color: $DarkGrayishViolet;
   }
 }
 .final {
   text-align: center;
   margin: 10rem auto;
-  padding: 0 var(--pd);
   color: white;
-  background: $DarkViolet;
-  position: relative;
-  z-index: -2;
-  .detalhe {
-    position: absolute;
-    top: 0;
-    width: 15.2rem;
-    z-index: -1;
-    right: 0;
-  }
+
   &__box {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
+    margin: 0 var(--pd);
     align-items: center;
+    .detalhe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 15.2rem;
+      z-index: -1;
+    }
+    &--bg {
+      background: $DarkViolet;
+      z-index: -1;
+    }
     h2 {
       font-weight: 400;
       margin-bottom: 3rem;
@@ -145,18 +153,84 @@
     }
   }
 }
-@media screen and (min-width: 1210px) {
-  .beneficios {
-    text-align: left;
+@media screen and (min-width: 550px) {
+  .introducao {
     &__box {
-      justify-content: start;
+      .detalhe-esq {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 8.8rem;
+      }
+      .detalhe-dir {
+        top: 0;
+        right: 0;
+        width: 20.6rem;
+        max-width: auto;
+      }
+      .detalhe-linha {
+        width: 23rem;
+      }
+    }
+    &__img {
+      display: grid;
+      img {
+        justify-self: center;
+        width: 54rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .introducao {
+    box-shadow: inset 0 -18rem white;
+    &__box {
+      grid-template-columns: 1fr 1fr;
+      .detalhe-esq {
+        width: 10.8rem;
+      }
+    }
+    &__img {
+      padding: 5rem var(--pd) 5rem 0;
+      margin-bottom: 5rem;
+      order: 1;
+      img {
+        width: auto;
+        height: 65rem;
+      }
+    }
+    &__conteudo {
+      text-align: left;
+      &-box {
+        padding: 1rem 0;
+      }
+      button {
+        margin-bottom: 18rem;
+      }
+      .detalhe-linha {
+        inset: 6rem auto auto var(--pd);
+        width: 20%;
+      }
+    }
+    .beneficios__box {
+      gap: 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .beneficios {
+    text-align: center;
+    &__box {
       gap: 4rem;
     }
   }
   .ben {
-    display: block;
+    width: 28rem;
   }
 }
+
 @media screen and (min-width: 1050px) {
   .final {
     .detalhe {
@@ -170,50 +244,6 @@
       padding: 1rem 6rem;
       h2 {
         margin: 0;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 850px) {
-  .introducao {
-    &__box {
-      grid-template-columns: 1fr 1fr;
-    }
-    &__img {
-      order: 1;
-    }
-    &__conteudo {
-      text-align: left;
-      button {
-        margin: 0 var(--pd);
-      }
-    }
-    .beneficios__box {
-      gap: 5rem;
-    }
-  }
-}
-@media screen and (min-width: 550px) {
-  .introducao {
-    &__box {
-      .detalhe-esq {
-        top: 82rem;
-        left: 0;
-        width: 10.8rem;
-      }
-      .detalhe-dir {
-        top: 0;
-        right: 0;
-        width: 20.6rem;
-        max-width: auto;
-      }
-    }
-    &__img {
-      display: grid;
-      img {
-        justify-self: center;
-        width: 54rem;
       }
     }
   }

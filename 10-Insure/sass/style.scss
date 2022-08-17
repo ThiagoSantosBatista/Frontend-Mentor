@@ -3,19 +3,17 @@
 @import "main";
 @import "footer";
 @media screen and (min-width: 730px) {
-:root{
-    --pd: 6rem;
-}
-}
-@media screen and (min-width: 730px) {
-    .social {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .footer__conteudo {
-      justify-content: flex-start;
-      text-align: left;
-      gap: 3.5rem;
-    }
+  :root {
+    --pd: 4rem;
   }
-  
+}
+@media screen and (min-width: 770px) {
+  .social {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__conteudo {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
