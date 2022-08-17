@@ -2,11 +2,77 @@
 @import "header";
 @import "main";
 @import "footer";
+
+@media screen and (min-width: 550px) {
+  .introducao {
+    &__box {
+      .detalhe-esq {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 8.8rem;
+      }
+      .detalhe-dir {
+        top: 0;
+        right: 0;
+        width: 20.6rem;
+        max-width: auto;
+      }
+      .detalhe-linha {
+        width: 23rem;
+      }
+    }
+    &__img {
+      padding-top: 2rem;
+      display: grid;
+      img {
+        justify-self: center;
+        width: 54rem;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 730px) {
   :root {
     --pd: 4rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .nav-header__btn {
+    display: none;
+  }
+  .header.sticky .nav-header__list {
+    padding: 0;
+  }
+  .nav-header {
+    &__list {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      background: none;
+      position: static;
+      min-height: auto;
+      padding: 0;
+      gap: 1rem;
+    }
+    &__item {
+      a {
+        color: $VeryDarkViolet;
+        padding: 1rem;
+      }
+      .header__btn {
+        padding: 1rem 1.5rem;
+        background: white;
+        color: $VeryDarkViolet;
+        border: 0.2rem solid $VeryDarkViolet;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 770px) {
   .social {
     flex-direction: row;
@@ -15,5 +81,72 @@
   .footer__conteudo {
     justify-content: flex-start;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .introducao {
+    box-shadow: inset 0 -18rem white;
+    &__box {
+      grid-template-columns: 1fr 1fr;
+      .detalhe-esq {
+        width: 10.8rem;
+      }
+    }
+    &__img {
+      padding: 5rem var(--pd) 5rem 0;
+      margin-bottom: 5rem;
+      order: 1;
+      img {
+        width: auto;
+        height: 65rem;
+      }
+    }
+    &__conteudo {
+      text-align: left;
+      &-box {
+        padding: 1rem 0;
+      }
+      button {
+        margin-bottom: 18rem;
+      }
+      .detalhe-linha {
+        inset: 6rem auto auto var(--pd);
+        width: 20%;
+      }
+    }
+    .beneficios__box {
+      gap: 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .beneficios {
+    text-align: center;
+    &__box {
+      gap: 4rem;
+    }
+  }
+  .ben {
+    width: 28rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .final {
+    .detalhe {
+      width: 43.4rem;
+    }
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 25rem;
+      text-align: left;
+      padding: 1rem 6rem;
+      h2 {
+        margin: 0;
+      }
+    }
   }
 }

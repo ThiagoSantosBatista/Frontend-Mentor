@@ -23,8 +23,12 @@
   position: relative;
   .nav-redes__list {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    a:hover path {
+      fill: $VeryDarkViolet;
+    }
   }
   .detalhe-linha {
     position: absolute;
@@ -61,6 +65,9 @@
       letter-spacing: 0.1rem;
       color: $DarkViolet;
       font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

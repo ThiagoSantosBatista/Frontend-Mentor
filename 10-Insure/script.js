@@ -1,5 +1,7 @@
 const menu = document.querySelector("#mobile-menu");
 const navItem = document.querySelectorAll(".nav-header__item");
+const data = document.querySelectorAll("[data-aos]");
+
 function toggleMenu(event) {
   if (event.type === "touchstart") {
     event.preventDefault();
@@ -16,13 +18,27 @@ function toggleMenu(event) {
   }
 }
 
+function animar() {
+  const windowTop = window.pageYOffset + window.innerHeight * 0.75;
+  data.forEach((element) => {
+    if (windowTop > element.offsetTop) {
+      element.classList.add("animacao");
+    } else {
+      element.classList.remove("animacao");
+    }
+  });
+}
+animar();
+
 navItem.forEach((link) => {
   link.addEventListener("click", toggleMenu);
 });
 
 menu.addEventListener("click", toggleMenu);
 menu.addEventListener("touchstart", toggleMenu);
+
 window.addEventListener("scroll", () => {
+  animar();
   let header = document.querySelector(".header");
   header.classList.toggle("sticky", window.scrollY > 0);
 });
