@@ -17,9 +17,8 @@ export const NavList = styled.ul`
    align-items: center;
    gap: 1.5rem;
    font-size: ${props => props.theme.font.nav};
-   color: ${props => props.theme.color.cinza2};
 
    a{
-      padding: 1rem;
+      padding: 1.5rem;
    }
 `

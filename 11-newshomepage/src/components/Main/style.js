@@ -1,54 +1,126 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const MainContainer = styled.main`
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, auto);
-   grid-template-areas:
-   "img   img   news"
-   "text  text  news"
-   "news2 news2 news2"
-   ;
-   gap: 2rem;
-   margin: 0 14rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "img   img   news"
+        "text  text  news"
+        "news2 news2 news2";
+    gap: 3rem;
+    margin: 0 14rem;
 
-   @media screen and (max-width: 1440px){
-   margin: 0 9.73%;
-
-   }
-`
+    @media screen and (max-width: 1440px) {
+        margin: 0 9.73%;
+    }
+`;
 
 export const MainPrincipalImg = styled.img`
-   grid-area: img;
-`
+    grid-area: img;
+    height: 100%;
+`;
 
 export const SectionNew = styled.section`
-   padding: 3rem 2.5rem 0;
-   grid-area: news;
-   background-color: ${props => props.theme.color.secondary};
+    padding: 3rem 2.5rem 0;
+    grid-area: news;
+    background-color: ${(props) => props.theme.color.secondary};
 
-   h2{
-      font-size: ${props => props.theme.font.h2};
-      color: ${props => props.theme.color.laranja};
-      font-weight: 700;
-      margin-bottom: 3rem;
-   }
-   h3{
-      font-size: ${props => props.theme.font.h3};
-      color: ${props => props.theme.color.primary};
-      font-weight: 700;
-      margin-bottom: 1rem;
-   }
-   p{
-      font-size: ${props => props.theme.font.p};
-      margin-bottom: 3rem;
-   }
-   .linha{
-      display: block;
-      width: 100%;
-      height: .1rem;
-      margin-bottom: 3rem;
-      background: ${props => props.theme.color.cinza1};
-   }
+    h2 {
+        font-size: ${(props) => props.theme.font.h2};
+        color: ${(props) => props.theme.color.laranja};
+        font-weight: 700;
+        margin-bottom: 3.5rem;
+    }
+    h3 {
+        font-size: ${(props) => props.theme.font.h3};
+        color: ${(props) => props.theme.color.primary};
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+    }
+    p {
+        font-size: ${(props) => props.theme.font.p};
+        margin-bottom: 3.2rem;
+        line-height: 1.5;
+        color: ${(props) => props.theme.color.cinza1};
+    }
+    .linha {
+        display: block;
+        width: 100%;
+        height: 0.1rem;
+        margin-bottom: 3.2rem;
+        background: ${(props) => props.theme.color.cinza1};
+    }
+`;
 
-`
+export const SectionText = styled.section`
+    grid-area: text;
+
+    .SectionNewsBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        height: 100%;
+    }
+    .TextBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    h1 {
+        font-size: ${(props) => props.theme.font.h1};
+        color: ${(props) => props.theme.color.secondary};
+        font-weight: 800;
+    }
+    p {
+        font-size: ${(props) => props.theme.font.p};
+        line-height: 1.5;
+    }
+    button {
+        cursor: pointer;
+        align-self: start;
+        border: none;
+        padding: 1.5rem 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+        font-size: ${(props) => props.theme.font.p};
+        color: ${(props) => props.theme.color.primary};
+        background: ${(props) => props.theme.color.vermelho};
+    }
+`;
+
+export const SectionNews = styled.section`
+    grid-area: news2;
+    margin: 4rem 0 7rem;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        li {
+            display: flex;
+            gap: 2rem;
+        }
+        img {
+            width: 10rem;
+            height: auto;
+        }
+        .num {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: ${(props) => props.theme.color.cinza1};
+        }
+        h4 {
+            font-size: ${(props) => props.theme.font.h4};
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: ${(props) => props.theme.color.secondary};
+        }
+        p{
+         font-size: ${(props) => props.theme.font.p};
+         line-height: 1.5;
+        }
+    }
+`;

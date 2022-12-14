@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
       min-height: 100vh;
       max-width: 144rem;
       margin: 0 auto;
-      color: ${props => props.theme.color.cinza1}
+      color: ${props => props.theme.color.cinza2}
    }
    img{
       display: block;

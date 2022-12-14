@@ -10,10 +10,10 @@ const theme = {
         vermelho: "hsl(5, 85%, 63%)",
     },
     font: {
-        h1: "4.8rem",
+        h1: "5.3rem",
         h2: "3.6rem",
-        h3: "1.8rem",
-        h4: "1.6rem",
+        h3: "2rem",
+        h4: "1.8rem",
         p: "1.5rem",
         nav: "1.5rem",
     },
