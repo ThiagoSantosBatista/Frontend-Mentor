@@ -25,12 +25,12 @@ const Main = () => {
                 </header>
                 <ul>
                     <li>
-                        <h3>Hydrogen VS Electric Cars</h3>
+                        <h3><a href="#home">Hydrogen VS Electric Cars</a></h3>
                         <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
                         <span className="linha"></span>
                     </li>
                     <li>
-                        <h3>The Downsides of AI Artistry</h3>
+                        <h3><a href="#home">The Downsides of AI Artistry</a></h3>
                         <p>
                             What are the possible adverse effects of on-demand
                             AI image generation?
@@ -38,7 +38,7 @@ const Main = () => {
                         <span className="linha"></span>
                     </li>
                     <li>
-                        <h3>Is VC Funding Drying Up?</h3>
+                        <h3><a href="#home">Is VC Funding Drying Up?</a></h3>
                         <p>
                             Private funding by VC firms is down 50% YOY. We take
                             a look at what that means.
@@ -47,7 +47,7 @@ const Main = () => {
                 </ul>
             </SectionNew>
             <SectionText>
-                <div className="SectionNewsBox">
+                <div className="SectionTextBox">
                     <header>
                         <h1>The Bright Future of Web 3.0?</h1>
                     </header>
@@ -68,7 +68,7 @@ const Main = () => {
                         <img src={Imagem1} alt="" />
                         <div>
                             <p className="num">01</p>
-                            <h4>Reviving Retro PCs</h4>
+                            <h4><a href="#home">Reviving Retro PCs</a></h4>
                             <p>
                                 What happens when old PCs are given modern
                                 upgrades?
@@ -79,7 +79,7 @@ const Main = () => {
                         <img src={Imagem2} alt="" />
                         <div>
                             <p className="num">02</p>
-                            <h4>Top 10 Laptops of 2022</h4>
+                            <h4><a href="#home">Top 10 Laptops of 2022</a></h4>
                             <p>Our best picks for various needs and budgets.</p>
                         </div>
                     </li>
@@ -87,7 +87,7 @@ const Main = () => {
                         <img src={Imagem3} alt="" />
                         <div>
                             <p className="num">03</p>
-                            <h4>The Growth of Gaming</h4>
+                            <h4><a href="#home">The Growth of Gaming</a></h4>
                             <p>
                                 How the pandemic has sparked fresh
                                 opportunities.

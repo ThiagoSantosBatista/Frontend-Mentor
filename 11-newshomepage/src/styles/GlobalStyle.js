@@ -22,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
       max-width: 100%;
    }
    a, li, button{
+      font-size: inherit;
+      font-weight: inherit;
       color: inherit;
       text-decoration: none;
       list-style: none;

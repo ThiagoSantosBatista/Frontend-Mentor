@@ -58,6 +58,10 @@ export const NavList = styled.ul`
 
     a {
         padding: 1rem 1.5rem;
+        &:hover {
+            transition: all 0.3s;
+            color: ${(props) => props.theme.color.vermelho};
+        }
     }
     @media screen and (max-width: 768px) {
         display: none;

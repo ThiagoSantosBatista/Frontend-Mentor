@@ -59,9 +59,21 @@ export const SectionNew = styled.section`
     }
     h3 {
         font-size: ${(props) => props.theme.font.h3};
-        color: ${(props) => props.theme.color.primary};
         font-weight: 700;
         margin-bottom: 1.2rem;
+        color: ${(props) => props.theme.color.primary};
+        @media (hover: hover) {
+            &:hover {
+                transition: all 0.3s;
+                color: ${(props) => props.theme.color.laranja};
+            }
+        }
+        @media (hover: none) {
+            button:hover {
+                transition: all 0.3s;
+                color: ${(props) => props.theme.color.primary};
+            }
+        }
     }
     p {
         font-size: ${(props) => props.theme.font.p};
@@ -77,14 +89,14 @@ export const SectionNew = styled.section`
         background: ${(props) => props.theme.color.cinza1};
     }
     @media screen and (max-width: 680px) {
-      margin-top: 2rem;
+        margin-top: 2rem;
     }
 `;
 
 export const SectionText = styled.section`
     grid-area: text;
 
-    .SectionNewsBox {
+    .SectionTextBox {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
@@ -116,9 +128,22 @@ export const SectionText = styled.section`
         font-size: ${(props) => props.theme.font.p};
         color: ${(props) => props.theme.color.primary};
         background: ${(props) => props.theme.color.vermelho};
+        @media (hover: hover) {
+            &:hover {
+                transition: all 0.3s;
+                background: ${(props) => props.theme.color.secondary};
+            }
+        }
+        @media (hover: none) {
+            &:hover {
+                transition: all 0.3s;
+                background: ${(props) => props.theme.color.vermelho};
+            }
+        }
     }
+
     @media screen and (max-width: 680px) {
-        .SectionNewsBox {
+        .SectionTextBox {
             grid-template-columns: 1fr;
             gap: 2rem;
         }
@@ -153,6 +178,18 @@ export const SectionNews = styled.section`
             font-weight: 700;
             margin-bottom: 1rem;
             color: ${(props) => props.theme.color.secondary};
+            @media (hover: hover) {
+                &:hover {
+                    transition: all 0.3s;
+                    color: ${(props) => props.theme.color.vermelho};
+                }
+            }
+            @media (hover: none) {
+                button:hover {
+                    transition: all 0.3s;
+                    color: ${(props) => props.theme.color.secondary};
+                }
+            }
         }
         p {
             font-size: ${(props) => props.theme.font.p};
@@ -169,6 +206,6 @@ export const SectionNews = styled.section`
         }
     }
     @media screen and (max-width: 680px) {
-      margin-top: 2rem;
+        margin-top: 2rem;
     }
 `;
