@@ -206,6 +206,6 @@ export const SectionNews = styled.section`
         }
     }
     @media screen and (max-width: 680px) {
-        margin-top: 2rem;
+        margin: 2rem 0;
     }
 `;
