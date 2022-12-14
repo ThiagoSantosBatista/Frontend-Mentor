@@ -1,5 +1,6 @@
 import React from "react";
 import ImagemPrincipal from "../../assets/image-web-3-desktop.jpg";
+import ImagemPrincipalMobile from "../../assets/image-web-3-mobile.jpg";
 import Imagem1 from "../../assets/image-retro-pcs.jpg";
 import Imagem2 from "../../assets/image-top-laptops.jpg";
 import Imagem3 from "../../assets/image-gaming-growth.jpg";
@@ -14,7 +15,10 @@ import {
 const Main = () => {
     return (
         <MainContainer>
-            <MainPrincipalImg src={ImagemPrincipal} />
+            <MainPrincipalImg>
+               <source media="(max-width: 600px)" srcSet={ImagemPrincipalMobile}></source>
+                <img src={ImagemPrincipal} alt="" />
+            </MainPrincipalImg>
             <SectionNew>
                 <header>
                     <h2>New</h2>
@@ -61,7 +65,7 @@ const Main = () => {
             <SectionNews>
                 <ul>
                     <li>
-                        <img src={Imagem1} />
+                        <img src={Imagem1} alt="" />
                         <div>
                             <p className="num">01</p>
                             <h4>Reviving Retro PCs</h4>
@@ -72,7 +76,7 @@ const Main = () => {
                         </div>
                     </li>
                     <li>
-                        <img src={Imagem2} />
+                        <img src={Imagem2} alt="" />
                         <div>
                             <p className="num">02</p>
                             <h4>Top 10 Laptops of 2022</h4>
@@ -80,7 +84,7 @@ const Main = () => {
                         </div>
                     </li>
                     <li>
-                        <img src={Imagem3} />
+                        <img src={Imagem3} alt="" />
                         <div>
                             <p className="num">03</p>
                             <h4>The Growth of Gaming</h4>

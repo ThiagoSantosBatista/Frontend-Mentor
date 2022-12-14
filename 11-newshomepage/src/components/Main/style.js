@@ -9,16 +9,41 @@ export const MainContainer = styled.main`
         "text  text  news"
         "news2 news2 news2";
     gap: 3rem;
-    margin: 0 14rem;
+    margin: 0 14rem 7rem;
 
     @media screen and (max-width: 1440px) {
-        margin: 0 9.73%;
+        margin: 0 9.73% 7rem;
+    }
+    @media screen and (max-width: 1340px) {
+        margin: 0 5.73% 7rem;
+    }
+    @media screen and (max-width: 1220px) {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        grid-template-areas:
+            "img   img "
+            "text  text"
+            "news  news2";
+        gap: 7rem 3rem;
+    }
+    @media screen and (max-width: 680px) {
+        margin: 0 5.73% 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "img "
+            "text"
+            "news"
+            "news2";
+        gap: 4rem;
     }
 `;
 
-export const MainPrincipalImg = styled.img`
+export const MainPrincipalImg = styled.picture`
     grid-area: img;
-    height: 100%;
+    img {
+        height: 100%;
+    }
 `;
 
 export const SectionNew = styled.section`
@@ -51,6 +76,9 @@ export const SectionNew = styled.section`
         margin-bottom: 3.2rem;
         background: ${(props) => props.theme.color.cinza1};
     }
+    @media screen and (max-width: 680px) {
+      margin-top: 2rem;
+    }
 `;
 
 export const SectionText = styled.section`
@@ -66,6 +94,7 @@ export const SectionText = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 3rem;
     }
     h1 {
         font-size: ${(props) => props.theme.font.h1};
@@ -88,16 +117,23 @@ export const SectionText = styled.section`
         color: ${(props) => props.theme.color.primary};
         background: ${(props) => props.theme.color.vermelho};
     }
+    @media screen and (max-width: 680px) {
+        .SectionNewsBox {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
 `;
 
 export const SectionNews = styled.section`
     grid-area: news2;
-    margin: 4rem 0 7rem;
+    margin-top: 4rem;
 
     ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+        height: 100%;
         li {
             display: flex;
             gap: 2rem;
@@ -118,9 +154,21 @@ export const SectionNews = styled.section`
             margin-bottom: 1rem;
             color: ${(props) => props.theme.color.secondary};
         }
-        p{
-         font-size: ${(props) => props.theme.font.p};
-         line-height: 1.5;
+        p {
+            font-size: ${(props) => props.theme.font.p};
+            line-height: 1.5;
         }
+    }
+
+    @media screen and (max-width: 1220px) {
+        margin: 0;
+
+        ul {
+            grid-template-columns: 1fr;
+            align-content: space-between;
+        }
+    }
+    @media screen and (max-width: 680px) {
+      margin-top: 2rem;
     }
 `;
