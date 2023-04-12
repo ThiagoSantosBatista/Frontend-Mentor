@@ -7,7 +7,7 @@ export const Header = styled.header`
   position: absolute;
   top: 8rem;
   margin: 0 auto;
-  padding: 0 13.5rem;
+  padding: 0 16.7rem;
   height: 7rem;
   width: 100%;
 `;
@@ -15,15 +15,28 @@ export const Header = styled.header`
 export const Box = styled.header`
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 6.4rem;
 `;
 
 export const List = styled.ul`
   display: flex;
-  gap: 2.4rem;
-  font-size: 1.8rem;
-
+  gap: 3rem;
+  
+  li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
   a{
-    color: white;
+    font-weight: 500;
   }
 `;
+
+export const Button = styled.button`
+  padding: 1.5rem 3rem;
+  color: hsl(356, 100%, 66%);
+  background-color: white;
+  border-radius: 5rem;
+`

@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     min-height: 100vh;
     color: white;
-    background: darkorange;
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     font-size: 1.6rem;
   }
   img{
@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a{
     display: inline-block;
+    color: white;
     text-decoration: none;
   }
   li{

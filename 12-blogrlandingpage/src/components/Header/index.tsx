@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import { ReactComponent as Logo } from "../../assets/logo/logo.svg";
+import { ReactComponent as HeaderArrow } from "../../assets/icons/icon-arrow-light.svg";
 
 const Header = () => {
   return (
@@ -9,9 +10,11 @@ const Header = () => {
         <Logo />
         <nav>
           <S.List>
-            <li>Product</li>
-            <li>Company</li>
-            <li>Connect</li>
+            <li>
+              Product <HeaderArrow />
+            </li>
+            <li>Company <HeaderArrow /></li>
+            <li>Connect <HeaderArrow /></li>
           </S.List>
         </nav>
       </S.Box>
@@ -20,7 +23,7 @@ const Header = () => {
           <a href="#">Login</a>
         </li>
         <li>
-          <a href="#">Sign Up</a>
+          <S.Button as='a' href="#">Sign Up</S.Button>
         </li>
       </S.List>
     </S.Header>
